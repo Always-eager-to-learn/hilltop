@@ -25,7 +25,7 @@
     background-color:rgba(255, 240, 246, 0.866);
     text-align: center;
     z-index: 2;
-    color: var(--sand-11);
+    color: var(--sand-12);
     backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
