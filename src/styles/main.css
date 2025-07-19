@@ -139,3 +139,31 @@
     object-fit: cover;
     aspect-ratio: 8 / 3.4;
 }
+
+.card-content-header::before{
+    counter-increment: value-counter;
+    content: counter(value-counter) '.';
+    font-size: 1.7rem;
+    margin-inline-end: 0.5rem;
+}
+
+.card-content-header{
+    letter-spacing: var(--font-letterspacing-3);
+    line-height: var(--font-lineheight-2);
+}
+
+.card-content .content-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-3);
+    color: var(--blue-12);
+    font-weight: var(--font-weight-5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-content .content-link svg{
+    width: 4em;
+    padding: 0.5em;
+}
