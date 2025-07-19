@@ -1,0 +1,17 @@
+@import 'open-props/colors.min.css';
+@import 'open-props/fonts.min.css';
+@import 'open-props/borders.min.css';
+@import 'open-props/easings.min.css';
+@import 'open-props/normalize.min.css';
+
+
+:root{
+    --white: #f9f9f9;
+    --gray: #eaeaea;
+    --black: #3e403d;
+    --light-gray: #f8f8f8;
+    --mid-gray: #8c8c84;
+    --yellow: #fddfa7;
+    --gold: #a68256;
+    --maroon: #590202;
+}

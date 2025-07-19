@@ -1,0 +1,52 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    margin: 0 0 1rem;
+}
+
+p:last-of-type{
+    margin: 0;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+.image{
+    margin: 0;
+}
+
+.access-hidden{
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.ionicon{
+    fill: var(--white);
+}
+
+.ionicon > path{
+    stroke: var(--black);
+}
+
+a.button{
+    display: block;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    padding: 1em 2em;
+    border: var(--border-size-2) solid var(--maroon);
+    border-radius: var(--radius-3);
+}

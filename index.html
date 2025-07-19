@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HillTop Landing Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+      body{
+            padding: 0;
+            margin: 0;
+            background-color: var(--white);
+            font-weight: 400;
+            line-height: 1.65;
+            font-size: 1rem;
+            color: var(--black);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        
+        .header{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 2em;
+            padding: 0.5em;
+        }
+
+        main, footer{
+            background-color: #f5f5f5;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="primary-logo">
+            HillTop
+        </h1>
+        <button class="mobile-nav" aria-label="Mobile Menu Button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <nav class="primary-nav">
+            <ul>
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Portfolio</a></li>
+                <li class="nav-item"><a href="#">Blog</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Service</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="header-right">
+            <button class="open-search" aria-label="Open search field">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" stroke-width="32"/><path d="M232 160a72 72 0 1072 72 72 72 0 00-72-72z" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M283.64 283.64L336 336"/></svg>
+            </button>
+
+            <div class="search-drawer">
+
+                <form action="#" class="search-form">
+                    <section class="search-form-first">
+                        <label for="search">
+                            Search this site: 
+                        </label>
+                        
+                        <button class="search-close" aria-label="Close search field" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+                        </button>
+                    </section>
+
+                    <section class="search-form-second">
+                        <input type="search" name="search-field" id="search" class="search-input" minlength="3" required>
+                        <button aria-label="Search button" class="search-button" type="submit">
+                            <svg aria-hidden='true' xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" stroke-width="32"/><path d="M232 160a72 72 0 1072 72 72 72 0 00-72-72z" stroke-miterlimit="10" stroke-width="32"/><path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M283.64 283.64L336 336"/></svg>
+                        </button>
+                    </section>
+                </form>
+            </div>
+
+            <nav class="social-nav">
+                <ul>
+                    <li class="social-item">
+                        <a href="https://github.com/Always-eager-to-learn/hilltop.git" target="_blank" class="github_link" data-hover-text="Visit the Github Repo of this page.">
+                            <span class="access-hidden">Visit the Github Repo of this landing page</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#">
+                            <span class="access-hidden">Pinterest</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256.05 32c-123.7 0-224 100.3-224 224 0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48a225.13 225.13 0 0063.5 9.2c123.7 0 224-100.3 224-224S379.75 32 256.05 32z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
+    </header>
+    <main class="main">
+        <!-- Slider Content -->
+        <section class="slider">
+            <div class="slider-content">
+                <div class="slider-content-container">
+                    <h2 class="slider-heading">Reach and Grow</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex magni quam asperiores eveniet nihil aliquam architecto dolores ipsa. Iure dignissimos eveniet quae optio rem.</p>
+                    <p><a href="#" class="button">Get Started</a></p>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-left" aria-label="Slide the image to the left">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+                </button>
+
+                <button class="slider-right" aria-label="Slide the image to the right">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+                </button>
+            </div>
+            
+            <ul>
+                <li class="slider-image">
+                    <figure class="image">
+                        <picture>
+                            <source srcset="./src/images/image-of-a-mountain.webp" type="image/webp">
+                            <img src="./src/images/image-of-a-mountain.jpg" alt="An image of a snow covered mountain under blue sky during daytime.">
+                        </picture>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Three Card Section -->
+        <section class="card-section">
+            <div class="card-heading">
+                <h3 class="primary-heading">Hilltop Creative</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias laboriosam placeat quos dolorum ipsum esse.</p>
+            </div>
+
+            <div class="three-card-container">
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>01. AWARD-WINNING DESIGN</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam laboriosam at explicabo quibusdam ea mollitia delectus repudiandae. Ab, ipsam ducimus.</p>
+                        <p><a href="#" class="content-link">Explore more about Award Winning Design
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+                        </a></p>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>02. PRESENT IDEAS ONLINE</h4>
+                        <p>A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
+                        <p><a href="#" class="content-link">Read more about Present Ideas Online
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+                        </a></p>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>03. EVERYTHING YOU NEED</h4>
+                        <p>A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
+                        <p><a href="#" class="content-link">Explore more about Everything you need
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+                        </a></p>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <!-- Two column section -->
+        <section class="two-column">
+            <figure class="image"><img src="" alt="An image"></figure>
+            <div class="column-content">
+                <h3>Healthy Morning</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo modi, optio cumque repudiandae fugit similique maiores incidunt aspernatur ut ratione, ducimus a. Quae, nihil nemo placeat voluptatibus autem impedit ducimus quis obcaecati eaque molestias similique tempora dicta perspiciatis vel velit?</p>
+            </div>
+        </section>
+
+        <!-- Three column section -->
+        <section class="card-section">
+            <div class="card-heading">
+                <h3 class="primary-heading">MEET OUR TEAM</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias laboriosam placeat quos dolorum ipsum esse.</p>
+            </div>
+
+            <div class="three-card-container">
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>Simon Roy</h4>
+                        <p>Creative Writer</p>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>John Smith</h4>
+                        <p>Photographer</p>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <figure class="image card-image">
+                        <img src="" alt="image">
+                    </figure>
+    
+                    <div class="card-content">
+                        <h4>Shelly Smith</h4>
+                        <p>Designer</p>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <!-- Overlay section -->
+        <section class="overlay-hover-section">
+            <div class="card-heading">
+                <h3>Featured Works</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="overlay-container">
+                <article class="overlay-item">
+                    <figure class="image"><img src="" alt="An image"></figure>
+                    <div class="overlay-content">
+                        <h4>MYSTERY</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </article>
+                
+                <article class="overlay-item">
+                    <figure class="image"><img src="" alt="An image"></figure>
+                    <div class="overlay-content">
+                        <h4>MYSTERY</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </article>
+
+                <article class="overlay-item">
+                    <figure class="image"><img src="" alt="An image"></figure>
+                    <div class="overlay-content">
+                        <h4>MYSTERY</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </article>
+
+                <article class="overlay-item">
+                    <figure class="image"><img src="" alt="An image"></figure>
+                    <div class="overlay-content">
+                        <h4>MYSTERY</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </article>
+            </div>
+
+            <p>
+                <a href="#" class="button">View all Works</a>
+            </p>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonial-slider-section">
+            <ul>
+                <li class="testimonial">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores enim ullam deleniti, velit numquam laboriosam asperiores itaque exercitationem atque odio alias labore. Facilis officiis alias velit numquam. Molestias, repellat. Ipsa laudantium, repellat deserunt modi, voluptate minima neque nobis assumenda eaque blanditiis dignissimos maiores? Natus suscipit deleniti quos, doloremque iusto beatae!</p>
+                        <p><cite>George Bernard Shaw</cite></p>
+                    </blockquote>
+                    
+                </li>
+            </ul>
+        </section>
+
+        <!-- Three column section -->
+        <section class="card-section">
+            <div class="card-heading">
+                <h3>Latest Post</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque totam assumenda, quae libero cumque. Similique labore natus suscipit assumenda!</p>
+            </div>
+
+            <div class="three-card-container">
+                <article class="card">
+                    <div class="card-category">Outfit</div>
+                    <h4>Beautiful Classic</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa mollitia molestias pariatur omnis illum eum ipsum rem a reprehenderit maiores?</p>
+                    <p>
+                        <time datetime="2025-7-13">July 13, 2025</time>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-category">LifeStyle</div>
+                    <h4>Ireland Character</h4>
+                    <p>Iure nemo illo ipsa! Ab magnam quidem, quisquam ducimus minima voluptas modi nihil laudantium molestiae. Expedita quos debitis animi voluptates voluptatem veniam odio.</p>
+                    <p>
+                        <time datetime="2025-7-13">July 13, 2025</time>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-category">Culture</div>
+                    <h4>Right Moment</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus tenetur quidem placeat eligendi consequuntur unde ab doloribus optio porro modi!</p>
+                    <p>
+                        <time datetime="2025-7-13">July 13, 2025</time>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Info Card -->
+        <section class="contact-info two-column">
+            <figure class="image"><img src="" alt="An image"></figure>
+            <form action="#" class="contact-form">
+                <label for="name" class="access-hidden" >FullName: </label>
+                <input type="text" name="username" id="name">
+
+                <label for="organization" class="access-hidden" >Organization Name: </label>
+                <input type="text" name="organization-name" id="organization">
+
+                <label for="goal" class="access-hidden">Your Goal: </label>
+                <input type="text" name="user-goal" id="goal">
+
+                <label for="email" class="access-hidden">Email: </label>
+                <input type="email" name="user-email" id="email">
+
+                <button class="button">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p><a href="#">hilltop@hilltop.co</a></p>
+        <p><a href="#">(555) 555-1212</a></p>
+        
+        <nav class="social-nav">
+            <ul>
+                <li class="social-item"><a href="https://github.com/Always-eager-to-learn/hilltop.git">
+                    <span class="access-hidden">Visit the Github Repo for more info</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+                </a></li>
+
+                <li class="social-item"><a href="#">
+                    <span class="access-hidden">Pininterest </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256.05 32c-123.7 0-224 100.3-224 224 0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48a225.13 225.13 0 0063.5 9.2c123.7 0 224-100.3 224-224S379.75 32 256.05 32z"/></svg>
+                </a></li>
+            </ul>
+        </nav>
+
+        <p class="copyright">Copyright &copy; <span id="copy"></span> HillTop</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
