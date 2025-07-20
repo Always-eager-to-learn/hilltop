@@ -54,11 +54,11 @@
 .slider-content-container p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
-    margin-block: 0.7em;
+    margin-block: 0.7rem;
 }
 
 .slider-content-container p:last-child{
-    margin-block: 0.3em;
+    margin-block: 0.3rem;
 }
 
 .slider-content-container .button{
@@ -82,14 +82,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.2em;
+    padding: 2.2rem;
     z-index: 0;
 }
 
 .slider-controls > *{
     cursor: pointer;
-    width: 3.4em;
-    padding: 0.5em;
+    width: 3.4rem;
+    padding: 0.5rem;
     height: auto;
     border: none;
     background-color: var(--orange-1);
@@ -145,6 +145,7 @@
     content: counter(value-counter) '.';
     font-size: 1.7rem;
     margin-inline-end: 0.5rem;
+    color: var(--maroon);
 }
 
 .card-content-header{
@@ -152,18 +153,143 @@
     line-height: var(--font-lineheight-2);
 }
 
-.card-content .content-link{
+.content-link{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: var(--font-letterspacing-3);
-    color: var(--blue-12);
+    color: var(--maroon);
     font-weight: var(--font-weight-5);
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.card-content .content-link svg{
+.content-link svg{
     width: 4em;
     padding: 0.5em;
+    transform: translateX(0);
+    transition: transform 350ms var(--ease-in-out-3);
+}
+
+.content-link:hover svg,
+.content-link:active svg,
+.content-link:focus svg{
+    transform: translateX(0.6rem);
+}
+
+.two-column{
+    padding: 3.5rem 1rem;
+    background-color: var(--sand-10);
+    color: var(--camo-0);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.two-column img{
+    width: 95%;
+    aspect-ratio: var(--ratio-landscape);
+    margin: 0 auto;
+    border-radius: var(--radius-3);
+    object-fit: cover;
+}
+
+.two-column .column-content{
+    padding-inline: 3rem;
+    align-self: center;
+}
+
+.two-column .column-content h3{
+    padding-block: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-4);
+    font-size: var(--font-size-5);
+}
+
+.two-column .column-content p{
+    letter-spacing: var(--font-letterspacing-3);
+}
+
+/* Three card section seperate styles for latest post section */
+.three-card-container .card .wrapper .card-category{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-2);
+    border-bottom: 1px dashed var(--sand-5);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-block-end: 1rem;
+}
+
+.fourth-heading{
+    letter-spacing: var(--font-letterspacing-3);
+    padding-block: 0.8rem;
+}
+
+.overlay-hover-section{
+    padding: 3.5rem 0;
+    background-color: var(--gray-2);
+}
+
+.overlay-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3px;
+    margin-bottom: 2.5rem;
+}
+
+.overlay-item{
+    position: relative;
+    z-index: 0;
+}
+
+.overlay-item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1.2 / 1.2;
+    border-radius: var(--radius-3);
+}
+
+.overlay-item .overlay-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 65%;
+    padding: 0.9rem;
+    background-color: rgba(255, 240, 246, 0.848);
+    color: var(--blue-12);
+    backdrop-filter: blur(0.5rem);
+    text-align: center;
+    border-radius: var(--radius-3);
+}
+
+.overlay-item .overlay-content::after{
+    content: '';
+    position: absolute;
+    width: calc(100% - 0.9rem);
+    height: calc(100% - 0.9rem);
+    left: 0.4rem;
+    top: 0.4rem;
+    border: 2px solid var(--black);
+    border-radius: var(--radius-3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.overlay-hover-section .button{
+    width: 30%;
+    color: var(--choco-12);
+    font-size: var(--font-size-4);
+    padding: 0.6rem;
+    background-color: var(--gray-3);
+    transition: background-color 450ms var(--ease-in-1)
+}
+
+.overlay-hover-section .button:hover,
+.overlay-hover-section .button:active,
+.overlay-hover-section .button:focus{
+    background-color: var(--indigo-0);
 }
