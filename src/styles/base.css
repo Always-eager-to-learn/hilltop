@@ -60,7 +60,7 @@ a.button{
     position: absolute;
     inset: 0;
     width: 100%;
-    height: auto;   
+    height: auto;
 }
 
 .slider-controls{
@@ -68,8 +68,48 @@ a.button{
     justify-content: space-between;
     align-items: center;
     padding: 2.2rem;
-    z-index: 0;
 }
+
+.dark-section{
+    background-color: var(--sand-10);
+    color: var(--camo-0);
+}
+
+/* Form */
+form{
+    padding: 2rem;
+}
+
+/* --------- */
+
+/* Inputs */
+input[type=text],
+input[type=email]{
+    background-color: var(--stone-0);
+    display: block;
+    margin: 0.4rem 0;
+    padding: 0.4rem;
+    border-radius: var(--radius-3);
+    outline: 2px solid var(--stone-0);
+    outline-offset: -4px;
+    font-size: var(--font-size-2);
+}
+
+input:focus-visible{
+    outline-offset: 2px;
+    outline-color: var(--gray-8);
+    transition: outline-offset 350ms var(--ease-in-2);
+}
+
+.form-group{
+    display: grid;
+}
+
+label{
+    font-size: var(--font-size-3);
+}
+
+/* ----------- */
 
 /* Three column structure */
 .card-section{

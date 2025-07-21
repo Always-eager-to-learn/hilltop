@@ -1,6 +1,11 @@
 /* Slider */
 .slider{
     position: relative;
+    z-index: 1;
+}
+
+.slider .slider-controls{
+    z-index: 0;
 }
 
 .slider-content{
@@ -106,7 +111,6 @@
 .slider ul{
     margin: 0;
     padding: 0;
-    z-index: -3;
 }
 
 .slider-image{
@@ -117,6 +121,8 @@
     object-fit: cover;
     aspect-ratio: 8 / 3.4;
 }
+
+/* Card contents */
 
 .card-content-header::before{
     counter-increment: value-counter;
@@ -157,8 +163,6 @@
 
 .two-column{
     padding: 3.5rem 1rem;
-    background-color: var(--sand-10);
-    color: var(--camo-0);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 1.5rem;
@@ -284,10 +288,10 @@
     padding: 3.5rem 1.3rem;
     background-color: var(--sand-10);
     color: var(--choco-0);
-    position: relative;
     height: auto;
     width: 100%;
     z-index: 1;
+    position: relative;
 }
 
 .testimonial-slider-section ul::before{
@@ -301,8 +305,17 @@
 
 .testimonial-slider-section ul{
     list-style-type: none;
+}
+
+.testimonial-slider-section .slider-controls{
+    z-index: 0;
+}
+
+.testimonial{
     max-width: 50rem;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .testimonial-slider-section .slider-button{
@@ -328,5 +341,34 @@
 
 /* Contact Section */
 .contact-info{
-    padding: 3.5rem 1rem;
+    background-color: var(--sand-9);
+}
+
+.contact-info .form-section{
+    width: 100%;
+    background-color: var(--stone-3);
+    border-radius: var(--radius-4);
+}
+
+.contact-info form{
+    width: 70%;
+}
+
+.form-section .button{
+    background-color: var(--gray-11);
+    color: var(--sand-0);
+    width: 50%;
+    padding: 0.5rem;
+    margin: 0.7rem;
+    font-size: var(--font-size-3);
+    transition: 
+        background-color 450ms var(--ease-in-out-2),
+        color 250ms var(--ease-in-2);
+}
+
+.form-section .button:hover,
+.form-section .button:active,
+.form-section .button:focus{
+    background-color: transparent;
+    color: var(--gray-11);
 }

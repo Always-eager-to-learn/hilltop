@@ -205,7 +205,7 @@
         </section>
 
         <!-- Two column section -->
-        <section class="two-column">
+        <section class="two-column dark-section">
             <figure class="image">
                 <picture>
                     <source srcset="./src/images/sun-rising-on-a-mountain.webp" type="image/webp">
@@ -425,22 +425,38 @@
 
         <!-- Contact Info Card -->
         <section class="contact-info two-column">
-            <figure class="image"><img src="" alt="An image"></figure>
-            <form action="#" class="contact-form">
-                <label for="name" class="access-hidden" >FullName: </label>
-                <input type="text" name="username" id="name">
+            <figure class="image">
+                <picture>
+                    <source srcset="./src/images/help-image.webp">
+                    <img src="./src/images/help-image.jpg" alt="Help sign image." loading="lazy">
+                </picture>
+            </figure>
 
-                <label for="organization" class="access-hidden" >Organization Name: </label>
-                <input type="text" name="organization-name" id="organization">
-
-                <label for="goal" class="access-hidden">Your Goal: </label>
-                <input type="text" name="user-goal" id="goal">
-
-                <label for="email" class="access-hidden">Email: </label>
-                <input type="email" name="user-email" id="email">
-
-                <button class="button">Send</button>
-            </form>
+            <div class="form-section">
+                <form action="#" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">FullName: </label>
+                        <input type="text" name="username" id="name" autocomplete="on" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="organization">Organization Name: </label>
+                        <input type="text" name="organization-name" id="organization" autocomplete="on" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="goal">Your Goal: </label>
+                        <input type="text" name="user-goal" id="goal" autocomplete="on" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" name="user-email" id="email" autocomplete="on" required>
+                    </div>
+    
+                    <button class="button">Send</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">
