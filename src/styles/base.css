@@ -56,6 +56,21 @@ a.button{
     text-align: center;
 }
 
+.slider-content, .slider-controls{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;   
+}
+
+.slider-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2rem;
+    z-index: 0;
+}
+
 /* Three column structure */
 .card-section{
     padding: 3.5rem 0;
