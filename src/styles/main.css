@@ -341,20 +341,20 @@
 
 /* Contact Section */
 .contact-info{
-    background-color: var(--sand-9);
+    background-color: var(--gray-2);
 }
 
-.contact-info .form-section{
+.contact-info img{
+    filter: brightness(95%);
+}
+
+.contact-info .contact-form{
     width: 100%;
-    background-color: var(--stone-3);
+    background-color: transparent;
     border-radius: var(--radius-4);
 }
 
-.contact-info form{
-    width: 70%;
-}
-
-.form-section .button{
+.contact-form .button{
     background-color: var(--gray-11);
     color: var(--sand-0);
     width: 50%;
@@ -364,11 +364,12 @@
     transition: 
         background-color 450ms var(--ease-in-out-2),
         color 250ms var(--ease-in-2);
+    border-radius: var(--radius-4);
 }
 
-.form-section .button:hover,
-.form-section .button:active,
-.form-section .button:focus{
+.contact-form .button:hover,
+.contact-form .button:active,
+.contact-form .button:focus{
     background-color: transparent;
     color: var(--gray-11);
 }

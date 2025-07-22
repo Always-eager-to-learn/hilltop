@@ -93,12 +93,26 @@ input[type=email]{
     outline: 2px solid var(--stone-0);
     outline-offset: -4px;
     font-size: var(--font-size-2);
+    width: 75%;
 }
 
 input:focus-visible{
     outline-offset: 2px;
     outline-color: var(--gray-8);
     transition: outline-offset 350ms var(--ease-in-2);
+}
+
+input:user-valid, input:focus:valid{
+    outline-color:rgb(102, 199, 102);
+}
+
+input:user-invalid{
+    outline-color: rgb(255, 126, 126);
+    outline-offset: 0px;
+}
+
+input:focus:invalid{
+    outline-color: rgb(252, 188, 69);
 }
 
 .form-group{

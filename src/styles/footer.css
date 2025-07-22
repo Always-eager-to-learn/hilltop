@@ -1,0 +1,44 @@
+.footer a{
+    color: var(--stone-0);
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active{
+    text-decoration-color: var(--red-0);
+}
+
+.footer .social-item a{
+    background-color: transparent;
+    border-radius: var(--radius-3);
+    transition: background-color 350ms var(--ease-in-3);
+}
+
+.footer .social-item a:hover,
+.footer .social-item a:focus,
+.footer .social-item a:active{
+    background-color: var(--red-0);
+}
+
+.footer .social-item a:hover .ionicon,
+.footer .social-item a:active .ionicon,
+.footer .social-item a:focus .ionicon{
+    fill: var(--gray-10);
+}
+
+.footer .social-item .ionicon{
+    fill: var(--gray-0);
+    transition: fill 250ms var(--ease-in-out-3)
+}
+
+.footer > .social-nav > ul{
+    justify-content: center;
+    gap: 1rem;
+}
+
+.copyright:last-of-type{
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-3);
+    margin: 2rem 0 0;
+    font-weight: var(--font-weight-6);
+}
