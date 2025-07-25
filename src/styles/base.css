@@ -21,21 +21,12 @@ button{
     cursor: pointer;
 }
 
+a{
+    display: inline-block;
+}
+
 .image{
     margin: 0;
-}
-
-.access-hidden{
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-}
-
-.ionicon{
-    fill: var(--white);
-    display: block;
 }
 
 .ionicon > path{
@@ -54,13 +45,6 @@ a.button{
 
 .center{
     text-align: center;
-}
-
-.slider-content, .slider-controls{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: auto;
 }
 
 .slider-controls{
@@ -88,31 +72,31 @@ input[type=email]{
     background-color: var(--stone-0);
     display: block;
     margin: 0.4rem 0;
-    padding: 0.4rem;
+    padding: 0.4rem 0.6rem;
     border-radius: var(--radius-3);
     outline: 2px solid var(--stone-0);
     outline-offset: -4px;
     font-size: var(--font-size-2);
     width: 75%;
+    transition: outline-offset 400ms var(--ease-in-out-2);
 }
 
 input:focus-visible{
     outline-offset: 2px;
-    outline-color: var(--gray-8);
     transition: outline-offset 350ms var(--ease-in-2);
 }
 
 input:user-valid, input:focus:valid{
-    outline-color:rgb(102, 199, 102);
+    outline-color: var(--support-green);
 }
 
 input:user-invalid{
-    outline-color: rgb(255, 126, 126);
-    outline-offset: 0px;
+    outline-color: var(--support-red);
+    outline-offset: -5px;
 }
 
 input:focus:invalid{
-    outline-color: rgb(252, 188, 69);
+    outline-color: var(--support-orange);
 }
 
 .form-group{
@@ -145,25 +129,11 @@ label{
     margin-block-end: 0.8em;
 }
 
-.three-card-container{
-    max-width: 80rem;
-    margin: 1px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.2em;
-    counter-reset: value-counter;
-}
-
 .three-card-container .card{
     padding: 0.8rem;
 }
 
 .three-card-container img{
-    object-fit: cover;
-    width: 90%;
-    aspect-ratio: var(--ratio-portrait);
-    margin: 0 auto;
-    padding-block-end: 1em;
     border-radius: var(--radius-2);
 }
 
@@ -177,4 +147,9 @@ label{
 .three-card-container .card .center h4{
     letter-spacing: var(--font-letterspacing-3);
     font-size: calc(var(--font-size-4) + 0.215rem);
+}
+
+/* images */
+.bright-10{
+    filter: brightness(110%);
 }

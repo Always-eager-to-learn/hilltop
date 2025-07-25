@@ -1,24 +1,10 @@
 /* Slider */
-.slider{
-    position: relative;
-    z-index: 1;
-}
 
 .slider .slider-controls{
     z-index: 0;
 }
 
-.slider-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .slider-content-container{
-    position: relative;
-    width: 40rem;
-    max-width: 100%;
-    padding: 2.8rem;
     background-color:rgba(255, 240, 246, 0.866);
     text-align: center;
     z-index: 2;
@@ -76,9 +62,6 @@
 }
 
 .slider-controls > *{
-    cursor: pointer;
-    width: 3.4rem;
-    padding: 0.5rem;
     height: auto;
     border: none;
     background-color: var(--orange-1);
@@ -108,20 +91,6 @@
     stroke: var(--gray-8)
 }
 
-.slider ul{
-    margin: 0;
-    padding: 0;
-}
-
-.slider-image{
-    list-style-type: none;
-}
-
-.slider-image img{
-    object-fit: cover;
-    aspect-ratio: 8 / 3.4;
-}
-
 /* Card contents */
 
 .card-content-header::before{
@@ -141,7 +110,7 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: var(--font-letterspacing-3);
-    color: var(--maroon);
+    color: var(--brand-color);
     font-weight: var(--font-weight-5);
     display: flex;
     align-items: center;
@@ -149,10 +118,12 @@
 }
 
 .content-link svg{
-    width: 4em;
-    padding: 0.5em;
     transform: translateX(0);
     transition: transform 350ms var(--ease-in-out-3);
+}
+
+.content-link .ionicon path{
+    stroke: var(--brand-color);
 }
 
 .content-link:hover svg,
@@ -169,11 +140,7 @@
 }
 
 .two-column img{
-    width: 95%;
-    aspect-ratio: var(--ratio-landscape);
-    margin: 0 auto;
     border-radius: var(--radius-3);
-    object-fit: cover;
 }
 
 .two-column .column-content{
