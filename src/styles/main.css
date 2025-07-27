@@ -30,7 +30,7 @@
 .slider-heading{
     margin: 0 0 1rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: var(--font-letterspacing-3);
     font-size: var(--font-size-5);
 }
 
