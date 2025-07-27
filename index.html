@@ -43,7 +43,7 @@
             width: 13rem;
             height: 3.8rem;
             max-width: 100%;
-            gap: 0.4rem;
+            gap: clamp(0.1rem, 0.2vw, 0.4rem);
         }
         main, footer{
             background-color: #f5f5f5;
@@ -65,7 +65,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            gap: clamp(0.84rem, 1.1vw, 2.5rem);
+            gap: clamp(0.65rem, 1.1vw, 2.5rem);
             padding-block: 0;
             padding-inline: 0.4rem;
             margin: 0;
@@ -85,7 +85,7 @@
             align-items: center;
             padding: 0;
             margin: 0;
-            gap: 0.8rem;
+            gap: clamp(0.2rem, 0.4vw, 0.8rem);
         }
         .social-nav > ul > li{
             list-style-type: none;
@@ -284,14 +284,6 @@
     <main class="main">
         <!-- Slider Content -->
         <section class="slider">
-            <div class="slider-content">
-                <div class="slider-content-container">
-                    <h2 class="slider-heading">Reach and Grow</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex magni quam asperiores eveniet nihil aliquam architecto dolores ipsa. Iure dignissimos eveniet quae optio rem.</p>
-                    <p><a href="#" class="button">Get Started</a></p>
-                </div>
-            </div>
-
             <div class="slider-controls">
                 <button class="slider-button slider-left" aria-label="Slide the image to the left">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
@@ -312,6 +304,14 @@
                     </figure>
                 </li>
             </ul>
+
+            <div class="slider-content">
+                <div class="slider-content-container">
+                    <h2 class="slider-heading">Reach and Grow</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex magni quam asperiores eveniet nihil aliquam architecto dolores ipsa. Iure dignissimos eveniet quae optio rem.</p>
+                    <p><a href="#" class="button">Get Started</a></p>
+                </div>
+            </div>
         </section>
 
         <!-- Three Card Section -->

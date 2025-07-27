@@ -1,7 +1,7 @@
 /* Slider */
 
 .slider .slider-controls{
-    z-index: 0;
+    z-index: 1;
 }
 
 .slider-content-container{
@@ -180,6 +180,11 @@
 .overlay-hover-section{
     padding: 3.5rem 0;
     background-color: var(--gray-2);
+}
+
+.overlay-hover-section .card-heading h3{
+    letter-spacing: var(--font-letterspacing-3);
+    text-transform: uppercase;
 }
 
 .overlay-container{

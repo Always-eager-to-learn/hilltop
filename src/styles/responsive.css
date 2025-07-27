@@ -1,9 +1,9 @@
 /* Navigation Bar */
 @media (width < 1024px){
     .header{
-        padding-bottom: 0;
+        padding-block: 0;
         justify-content: start;
-        aspect-ratio: 1 / 0.12;
+        height: 4.5rem;
     }
 
     .primary-logo{
@@ -125,15 +125,63 @@
         position: absolute;
         right: 4.5rem;
     }
+
+    /* Slider */
+    .slider-image img{
+        aspect-ratio: 1 / 0;
+    }
+}
+
+@media (width < 861px){
+    .slider-content-container{
+        width: 70%;
+        backdrop-filter: blur(3px);
+    }
+}
+
+@media (width < 732px){
+    .slider{
+        padding: 1rem;
+    }
+
+    .slider-content{
+        position: static;
+        margin: 0 0 1rem;
+        transform: translate(5px, 10px);
+    }
+
+    .slider-content-container{
+        width: 95%;
+        background-color: var(--red-0);
+        padding: 1.5rem;
+    }
+
+    .slider-content-container::after{
+        top: 1rem;
+        left: 1rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+    }
+
+    .slider-image img{
+        border-radius: var(--radius-3);
+    }
+}
+
+@media (width < 517px){
+    .slider{
+        padding: 0.4rem;
+    }
+
+    .slider-image img{
+        height: 15rem;
+        aspect-ratio: 2 / 1;
+    }
 }
 
 @media (width < 426px){
-    .header{
-        aspect-ratio: 1 / 0.2;
-    }
-
     .mobile-nav > *{
-        height: 0.145rem;
+        height: 0.2rem;
         margin-block: 0.25rem;
     }
 }

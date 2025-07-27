@@ -19,5 +19,5 @@
     --support-red: hsl(0, 73%, 53%);
     --support-green: hsl(120, 69%, 45%);
     --support-orange: hsl(39, 78%, 55%);
-    --font-size-fluid-1: max(0.95rem, min(1.35vw, 1.46rem));
+    --font-size-fluid-1: max(1rem, min(1.35vw, 1.46rem));
 }
