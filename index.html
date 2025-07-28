@@ -27,7 +27,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            gap: 2em;
+            gap: clamp(0.5rem, 1.5vw, 2.3rem);
             padding: 0.5em;
             position: sticky;
             inset: 0;
@@ -90,7 +90,7 @@
         .social-nav > ul > li{
             list-style-type: none;
         }
-        .social-nav.inactive{
+        .primary-nav .social-nav{
             display: none;
         }
         .social-item > a{
@@ -219,7 +219,7 @@
                 <li class="nav-item"><a class="hover-link" href="#">Contact</a></li>
             </ul>
 
-            <ul class="social-nav inactive">
+            <ul class="social-nav">
                 <li class="social-item">
                     <a href="https://github.com/Always-eager-to-learn/hilltop.git" target="_blank" class="github_link" data-hover-text="Visit the Github Repo">
                         <span class="access-hidden">Visit the Github Repo of this landing page</span>
@@ -317,8 +317,9 @@
         <!-- Three Card Section -->
         <section class="card-section">
             <div class="card-heading">
-                <h3 class="primary-heading">Hilltop Creative</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias laboriosam placeat quos dolorum ipsum esse.</p>
+                <h3 class="primary-heading font-h3">Hilltop Creative</h3>
+                <p class="font-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="font-small">Corporis voluptas totam molestiae debitis alias laboriosam placeat quos dolorum ipsum esse.</p>
             </div>
 
             <div class="three-card-container">
@@ -331,9 +332,9 @@
                     </figure>
     
                     <div class="card-content">
-                        <h4 class="card-content-header">AWARD-WINNING DESIGN</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam laboriosam at explicabo quibusdam ea mollitia delectus repudiandae. Ab, ipsam ducimus.</p>
-                        <p><a href="#" class="content-link">Explore about Award Winning Design
+                        <h4 class="card-content-header font-h4">AWARD-WINNING DESIGN</h4>
+                        <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam laboriosam at explicabo quibusdam ea mollitia delectus repudiandae. Ab, ipsam ducimus.</p>
+                        <p><a href="#" class="content-link font-small">Explore about Award Winning Design
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -348,9 +349,9 @@
                     </figure>
     
                     <div class="card-content">
-                        <h4 class="card-content-header">PRESENT IDEAS ONLINE</h4>
-                        <p>A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
-                        <p><a href="#" class="content-link">Read about Present Ideas Online
+                        <h4 class="card-content-header font-h4">PRESENT IDEAS ONLINE</h4>
+                        <p class="font-small">A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
+                        <p><a href="#" class="content-link font-small">Read about Present Ideas Online
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -365,9 +366,9 @@
                     </figure>
     
                     <div class="card-content">
-                        <h4 class="card-content-header">EVERYTHING YOU NEED</h4>
-                        <p>A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
-                        <p><a href="#" class="content-link">Explore about Everything you need
+                        <h4 class="card-content-header font-h4">EVERYTHING YOU NEED</h4>
+                        <p class="font-small">A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
+                        <p><a href="#" class="content-link font-small">Explore about Everything you need
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -385,16 +386,19 @@
                 </picture>
             </figure>
             <div class="column-content">
-                <h3>Healthy Morning</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quae rerum eos explicabo quaerat inventore blanditiis, assumenda labore odit asperiores sequi magnam pariatur fugit fuga suscipit expedita repellendus iusto quo minima! Aliquam nobis repellendus minima iste necessitatibus nostrum dolorum nisi aliquid odit voluptatum voluptas perferendis, inventore fugit, impedit magnam aut quod. Minima, commodi! Et, quos.</p>
+                <h3 class="font-h3">Healthy Morning</h3>
+                <p class="font-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quae rerum eos explicabo quaerat inventore blanditiis, assumenda.</p>
+                <p class="font-small">Labore odit asperiores sequi magnam pariatur fugit fuga suscipit expedita repellendus iusto quo minima! Aliquam nobis repellendus minima.</p>
+                <p class="font-small">Iste necessitatibus nostrum dolorum nisi aliquid odit voluptatum voluptas perferendis, inventore fugit, impedit magnam aut quod. Minima, commodi! Et, quos.</p>
             </div>
         </section>
 
         <!-- Three column section -->
         <section class="card-section">
             <div class="card-heading">
-                <h3 class="primary-heading">MEET OUR TEAM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias laboriosam placeat quos dolorum ipsum esse.</p>
+                <h3 class="primary-heading font-h3">MEET OUR TEAM</h3>
+                <p class="font-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias.</p>
+                <p class="font-small">Laboriosam placeat quos dolorum ipsum esse.</p>
             </div>
 
             <div class="three-card-container">
@@ -407,8 +411,8 @@
                     </figure>
     
                     <div class="card-content center">
-                        <h4>Simon Roy</h4>
-                        <p>Creative Writer</p>
+                        <h4 class="font-h4">Simon Roy</h4>
+                        <p class="font-small">Creative Writer</p>
                     </div>
                 </article>
     
@@ -421,8 +425,8 @@
                     </figure>
     
                     <div class="card-content center">
-                        <h4>Shelly Heidi</h4>
-                        <p>Photographer</p>
+                        <h4 class="font-h4">Shelly Heidi</h4>
+                        <p class="font-small">Photographer</p>
                     </div>
                 </article>
     
@@ -435,8 +439,8 @@
                     </figure>
     
                     <div class="card-content center">
-                        <h4>John Smith</h4>
-                        <p>Designer</p>
+                        <h4 class="font-h4">John Smith</h4>
+                        <p class="font-small">Designer</p>
                     </div>
                 </article>
             </div>
@@ -446,8 +450,8 @@
         <!-- Overlay section -->
         <section class="overlay-hover-section">
             <div class="card-heading">
-                <h3>Featured Works</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h3 class="font-h3">Featured Works</h3>
+                <p class="font-small">Lorem ipsum dolor sit amet.</p>
             </div>
 
             <div class="overlay-container">
@@ -459,8 +463,8 @@
                         </picture>
                     </figure>
                     <div class="overlay-content">
-                        <h4 class="fourth-heading">MYSTERY</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h4 class="fourth-heading font-h4">MYSTERY</h4>
+                        <p class="font-small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </article>
                 
@@ -472,8 +476,8 @@
                         </picture>
                     </figure>
                     <div class="overlay-content">
-                        <h4 class="fourth-heading">MYSTERY</h4>
-                        <p>Sit, veniam. Voluptate, cumque repudiandae. Nostrum, inventore.</p>
+                        <h4 class="fourth-heading font-h4">MYSTERY</h4>
+                        <p class="font-small">Sit, veniam. Voluptate, cumque repudiandae. Nostrum, inventore.</p>
                     </div>
                 </article>
 
@@ -485,8 +489,8 @@
                         </picture>
                     </figure>
                     <div class="overlay-content">
-                        <h4 class="fourth-heading">MYSTERY</h4>
-                        <p>Optio voluptatibus sunt iure aspernatur.</p>
+                        <h4 class="fourth-heading font-h4">MYSTERY</h4>
+                        <p class="font-small">Optio voluptatibus sunt iure aspernatur.</p>
                     </div>
                 </article>
 
@@ -498,14 +502,14 @@
                         </picture>
                     </figure>
                     <div class="overlay-content">
-                        <h4 class="fourth-heading">MYSTERY</h4>
-                        <p>Autem porro rem ex et nesciunt accusantium laboriosam quidem!</p>
+                        <h4 class="fourth-heading font-h4">MYSTERY</h4>
+                        <p class="font-small">Autem porro rem ex et nesciunt accusantium laboriosam quidem!</p>
                     </div>
                 </article>
             </div>
 
             <p class="center">
-                <a href="#" class="button">View all Works</a>
+                <a href="#" class="button font-h4">View all Works</a>
             </p>
         </section>
 
@@ -522,8 +526,10 @@
             <ul>
                 <li class="testimonial">
                     <blockquote>
-                        <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores enim ullam deleniti, velit numquam laboriosam asperiores itaque exercitationem atque odio alias labore. Facilis officiis alias velit numquam. Molestias, repellat. Ipsa laudantium, repellat deserunt modi, voluptate minima neque nobis assumenda eaque blanditiis dignissimos maiores? Natus suscipit deleniti quos, doloremque iusto beatae!</p>
-                        <p class="center"><cite>George Bernard Shaw</cite></p>
+                        <p class="font-small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores enim ullam deleniti, velit numquam laboriosam asperiores itaque exercitationem atque odio alias labore.</p>
+                        <p class="font-small">Facilis officiis alias velit numquam. Molestias, repellat. Ipsa laudantium, repellat deserunt modi, voluptate minima neque nobis assumenda eaque blanditiis dignissimos maiores? </p>
+                        <p class="font-small">Natus suscipit deleniti quos, doloremque iusto beatae!</p>
+                        <p class="center font-small"><cite>George Bernard Shaw</cite></p>
                     </blockquote>
                     
                 </li>
@@ -533,8 +539,8 @@
         <!-- Three column section -->
         <section class="card-section">
             <div class="card-heading">
-                <h3>Latest Post</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque totam assumenda, quae libero cumque. Similique labore natus suscipit assumenda!</p>
+                <h3 class="font-h3">Latest Post</h3>
+                <p class="font-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque totam assumenda, quae libero cumque. Similique labore natus suscipit assumenda!</p>
             </div>
 
             <div class="three-card-container">
@@ -547,10 +553,10 @@
                     </figure>
 
                     <div class="wrapper">
-                        <div class="card-category center">Outfit</div>
-                        <h4 class="fourth-heading center">Beautiful Classic</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero explicabo mollitia unde est necessitatibus numquam, porro maxime. Distinctio laboriosam illo nisi veniam rem tempora, quidem suscipit a odit nihil.</p>
-                        <p class="center">
+                        <div class="card-category center font-small">Outfit</div>
+                        <h4 class="fourth-heading center font-h4">Beautiful Classic</h4>
+                        <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero explicabo mollitia unde est necessitatibus numquam, porro maxime. Distinctio laboriosam illo nisi veniam rem tempora, quidem suscipit a odit nihil.</p>
+                        <p class="center font-small">
                             <time datetime="2025-7-13">July 13, 2025</time>
                         </p>
                     </div>
@@ -566,10 +572,10 @@
                     </figure>
 
                     <div class="wrapper">
-                        <div class="card-category center">LifeStyle</div>
-                        <h4 class="fourth-heading center">Ireland Character</h4>
-                        <p>Iure nemo illo ipsa! Ab magnam quidem, quisquam ducimus minima voluptas modi nihil laudantium molestiae. Expedita quos debitis animi voluptates voluptatem veniam odio.</p>
-                        <p class="center">
+                        <div class="card-category center font-small">LifeStyle</div>
+                        <h4 class="fourth-heading center font-h4">Ireland Character</h4>
+                        <p class="font-small">Iure nemo illo ipsa! Ab magnam quidem, quisquam ducimus minima voluptas modi nihil laudantium molestiae. Expedita quos debitis animi voluptates voluptatem veniam odio.</p>
+                        <p class="center font-small">
                             <time datetime="2025-7-13">July 13, 2025</time>
                         </p>
                     </div>
@@ -584,10 +590,10 @@
                     </figure>
 
                     <div class="wrapper">
-                        <div class="card-category center">Culture</div>
-                        <h4 class="fourth-heading center">Right Moment</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci at inventore quisquam consectetur ad, ipsa laudantium sunt ipsam unde. Quis, autem dolorum? Assumenda fugit sint quae eaque iusto molestias laborum?</p>
-                        <p class="center">
+                        <div class="card-category center font-small">Culture</div>
+                        <h4 class="fourth-heading center font-h4">Right Moment</h4>
+                        <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci at inventore quisquam consectetur ad, ipsa laudantium sunt ipsam unde. Quis, autem dolorum? Assumenda fugit sint quae eaque iusto molestias laborum?</p>
+                        <p class="center font-small">
                             <time datetime="2025-7-13">July 13, 2025</time>
                         </p>
                     </div>

@@ -20,4 +20,10 @@
     --support-green: hsl(120, 69%, 45%);
     --support-orange: hsl(39, 78%, 55%);
     --font-size-fluid-1: max(1rem, min(1.35vw, 1.46rem));
+    --font-d-0: 1.1rem;
+    --font-d-m-0: 0.7rem;
+    --font-d-1: 1.56rem;
+    --font-d-m-1: 1.16rem;
+    --font-d-2: 1.93rem;
+    --font-d-m-2: calc(var(--font-d-2) - 0.4rem);
 }

@@ -101,15 +101,9 @@
     color: var(--maroon);
 }
 
-.card-content-header{
-    letter-spacing: var(--font-letterspacing-3);
-    line-height: var(--font-lineheight-2);
-}
-
 .content-link{
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-3);
     color: var(--brand-color);
     font-weight: var(--font-weight-5);
     display: flex;
@@ -136,7 +130,7 @@
     padding: 3.5rem 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 1.5rem;
+    gap: clamp(0.6rem, 1.5vw, 1.5rem);
 }
 
 .two-column img{
@@ -151,19 +145,12 @@
 .two-column .column-content h3{
     padding-block: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-4);
-    font-size: var(--font-size-5);
-}
-
-.two-column .column-content p{
-    letter-spacing: var(--font-letterspacing-3);
 }
 
 /* Three card section seperate styles for latest post section */
 .three-card-container .card .wrapper .card-category{
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-2);
     border-bottom: 1px dashed var(--sand-5);
     margin-left: 50%;
     transform: translateX(-50%);
@@ -171,7 +158,6 @@
 }
 
 .fourth-heading{
-    letter-spacing: var(--font-letterspacing-3);
     padding-block: 0.8rem;
 }
 
@@ -183,7 +169,6 @@
 }
 
 .overlay-hover-section .card-heading h3{
-    letter-spacing: var(--font-letterspacing-3);
     text-transform: uppercase;
 }
 
@@ -238,7 +223,6 @@
 .overlay-hover-section .button{
     width: 30%;
     color: var(--choco-12);
-    font-size: var(--font-size-4);
     padding: 0.6rem;
     background-color: var(--gray-3);
     transition: background-color 450ms var(--ease-in-1)
@@ -252,7 +236,6 @@
 
 .overlay-hover-section .fourth-heading{
     margin: 0 0 0.4rem;
-    letter-spacing: var(--font-letterspacing-3);
 }
 
 /* Testimonial section */
