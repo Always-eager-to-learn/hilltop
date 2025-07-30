@@ -1,5 +1,4 @@
 @import 'open-props/colors.min.css';
-@import 'open-props/fonts.min.css';
 @import 'open-props/borders.min.css';
 @import 'open-props/easings.min.css';
 @import 'open-props/normalize.min.css';
@@ -20,10 +19,13 @@
     --support-green: hsl(120, 69%, 45%);
     --support-orange: hsl(39, 78%, 55%);
     --font-size-fluid-1: max(1rem, min(1.35vw, 1.46rem));
-    --font-d-0: 1.1rem;
-    --font-d-m-0: 0.7rem;
-    --font-d-1: 1.56rem;
-    --font-d-m-1: 1.16rem;
-    --font-d-2: 1.93rem;
-    --font-d-m-2: calc(var(--font-d-2) - 0.4rem);
+    --ease-elastic-out-2: cubic-bezier(0.51, 0.69, 0.75, 1.25);
+    --font-0: 1.15rem;
+    --font-1: 2rem;
+    --font-2: 2.3125rem;
+    --font-3: 2.68rem;
+    --font-heading: 2.1rem;
+    --font-link: 1.1875rem;
+    --font-button: 1.45rem;
+    --font-label: 1.375rem;
 }

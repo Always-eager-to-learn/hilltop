@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -28,7 +31,7 @@
             justify-content: space-evenly;
             align-items: center;
             gap: clamp(0.5rem, 1.5vw, 2.3rem);
-            padding: 0.5em;
+            padding: 0.2rem 0.5rem;
             position: sticky;
             inset: 0;
             background-color: rgb(241, 243, 245);
@@ -95,12 +98,8 @@
         }
         .social-item > a{
             display: block;
-            width: 3rem;
+            width: 3.6rem;
             padding: 0.5rem;
-        }
-        .social-item > a > .ionicon{
-            display: block;
-            width: 2rem;
         }
         /* Logo */
         .primary-logo{
@@ -124,7 +123,8 @@
         .open-search, .search-button{
             background-color: inherit;
             padding: 6px;
-            width: 3rem;
+            width: 3.6rem;
+            border-radius: var(--radius-3);
         }
         /* Mobile Navigation */
         .mobile-nav, .mobile-close-nav{
@@ -177,7 +177,7 @@
             max-width: 80rem;
             margin: 1px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.2em;
             counter-reset: value-counter;
         }
@@ -197,7 +197,7 @@
   </head>
   <body>
     <header class="header">
-        <h1 class="primary-logo">
+        <h1 class="primary-logo font-heading">
             HillTop
         </h1>
         <button class="mobile-nav" aria-label="Open Menu Bar">
@@ -211,12 +211,12 @@
                 <div></div>
             </button>
             <ul>
-                <li class="nav-item"><a class="hover-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="hover-link" href="#">Portfolio</a></li>
-                <li class="nav-item"><a class="hover-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="hover-link" href="#">About</a></li>
-                <li class="nav-item"><a class="hover-link" href="#">Service</a></li>
-                <li class="nav-item"><a class="hover-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">About</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">Service</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#">Contact</a></li>
             </ul>
 
             <ul class="social-nav">
@@ -307,9 +307,9 @@
 
             <div class="slider-content">
                 <div class="slider-content-container">
-                    <h2 class="slider-heading">Reach and Grow</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex magni quam asperiores eveniet nihil aliquam architecto dolores ipsa. Iure dignissimos eveniet quae optio rem.</p>
-                    <p><a href="#" class="button">Get Started</a></p>
+                    <h2 class="slider-heading font-h2">Reach and Grow</h2>
+                    <p class="font-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex magni quam asperiores eveniet nihil aliquam architecto dolores ipsa. Iure dignissimos eveniet quae optio rem.</p>
+                    <p><a href="#" class="button font-link">Get Started</a></p>
                 </div>
             </div>
         </section>
@@ -334,7 +334,7 @@
                     <div class="card-content">
                         <h4 class="card-content-header font-h4">AWARD-WINNING DESIGN</h4>
                         <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam laboriosam at explicabo quibusdam ea mollitia delectus repudiandae. Ab, ipsam ducimus.</p>
-                        <p><a href="#" class="content-link font-small">Explore about Award Winning Design
+                        <p><a href="#" class="content-link font-link margin-1-5">Explore about Award Winning Design
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -351,7 +351,7 @@
                     <div class="card-content">
                         <h4 class="card-content-header font-h4">PRESENT IDEAS ONLINE</h4>
                         <p class="font-small">A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
-                        <p><a href="#" class="content-link font-small">Read about Present Ideas Online
+                        <p><a href="#" class="content-link font-link margin-1-5">Read about Present Ideas Online
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -368,7 +368,7 @@
                     <div class="card-content">
                         <h4 class="card-content-header font-h4">EVERYTHING YOU NEED</h4>
                         <p class="font-small">A delectus esse reprehenderit accusantium harum explicabo tenetur tempora distinctio corporis, culpa aspernatur sint, quam inventore labore dolorum sit velit nihil facilis</p>
-                        <p><a href="#" class="content-link font-small">Explore about Everything you need
+                        <p><a href="#" class="content-link font-link margin-1-5">Explore about Everything you need
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M262.62 336L342 256l-79.38-80M330.97 256H170"/><path d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
                         </a></p>
                     </div>
@@ -386,7 +386,7 @@
                 </picture>
             </figure>
             <div class="column-content">
-                <h3 class="font-h3">Healthy Morning</h3>
+                <h3 class="font-h3">Healthy  Morning</h3>
                 <p class="font-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quae rerum eos explicabo quaerat inventore blanditiis, assumenda.</p>
                 <p class="font-small">Labore odit asperiores sequi magnam pariatur fugit fuga suscipit expedita repellendus iusto quo minima! Aliquam nobis repellendus minima.</p>
                 <p class="font-small">Iste necessitatibus nostrum dolorum nisi aliquid odit voluptatum voluptas perferendis, inventore fugit, impedit magnam aut quod. Minima, commodi! Et, quos.</p>
@@ -509,7 +509,7 @@
             </div>
 
             <p class="center">
-                <a href="#" class="button font-h4">View all Works</a>
+                <a href="#" class="button font-button">View all Works</a>
             </p>
         </section>
 
@@ -556,8 +556,8 @@
                         <div class="card-category center font-small">Outfit</div>
                         <h4 class="fourth-heading center font-h4">Beautiful Classic</h4>
                         <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero explicabo mollitia unde est necessitatibus numquam, porro maxime. Distinctio laboriosam illo nisi veniam rem tempora, quidem suscipit a odit nihil.</p>
-                        <p class="center font-small">
-                            <time datetime="2025-7-13">July 13, 2025</time>
+                        <p class="center font-small margin-1-5">
+                            <time datetime="2025-7-13">July 20, 2025</time>
                         </p>
                     </div>
                     
@@ -573,11 +573,13 @@
 
                     <div class="wrapper">
                         <div class="card-category center font-small">LifeStyle</div>
-                        <h4 class="fourth-heading center font-h4">Ireland Character</h4>
-                        <p class="font-small">Iure nemo illo ipsa! Ab magnam quidem, quisquam ducimus minima voluptas modi nihil laudantium molestiae. Expedita quos debitis animi voluptates voluptatem veniam odio.</p>
-                        <p class="center font-small">
-                            <time datetime="2025-7-13">July 13, 2025</time>
-                        </p>
+                        <div class="card-content">
+                            <h4 class="fourth-heading center font-h4">Ireland Character</h4>
+                            <p class="font-small">Iure nemo illo ipsa! Ab magnam quidem, quisquam ducimus minima voluptas modi nihil laudantium molestiae. Expedita quos debitis animi voluptates voluptatem veniam odio.</p>
+                            <p class="center font-small margin-1-5">
+                                <time datetime="2025-7-13">July 13, 2025</time>
+                            </p>
+                        </div>
                     </div>
                 </article>
 
@@ -593,8 +595,8 @@
                         <div class="card-category center font-small">Culture</div>
                         <h4 class="fourth-heading center font-h4">Right Moment</h4>
                         <p class="font-small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci at inventore quisquam consectetur ad, ipsa laudantium sunt ipsam unde. Quis, autem dolorum? Assumenda fugit sint quae eaque iusto molestias laborum?</p>
-                        <p class="center font-small">
-                            <time datetime="2025-7-13">July 13, 2025</time>
+                        <p class="center font-small margin-1-5">
+                            <time datetime="2025-7-13">July 15, 2025</time>
                         </p>
                     </div>
                 </article>
@@ -612,23 +614,23 @@
 
             <form action="#" class="contact-form">
                 <div class="form-group">
-                    <label for="name">FullName: </label>
-                    <input type="text" name="username" id="name" autocomplete="on" required>
+                    <label for="name" class="font-label">FullName: </label>
+                    <input type="text" name="username" id="name" autocomplete="on" required class="font-input">
                 </div>
 
                 <div class="form-group">
-                    <label for="organization">Organization Name: </label>
-                    <input type="text" name="organization-name" id="organization" autocomplete="on" required>
+                    <label for="organization" class="font-label">Organization Name: </label>
+                    <input type="text" name="organization-name" id="organization" autocomplete="on" required class="font-input">
                 </div>
 
                 <div class="form-group">
-                    <label for="goal">Your Goal: </label>
-                    <input type="text" name="user-goal" id="goal" autocomplete="on" required>
+                    <label for="goal" class="font-label">Your Goal: </label>
+                    <input type="text" name="user-goal" id="goal" autocomplete="on" required class="font-input">
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input type="email" name="user-email" id="email" autocomplete="on" required>
+                    <label for="email" class="font-label">Email: </label>
+                    <input type="email" name="user-email" id="email" autocomplete="on" required class="font-input">
                 </div>
 
                 <button class="button">Send</button>
@@ -636,8 +638,8 @@
         </section>
     </main>
     <footer class="footer">
-        <p><a href="#">hilltop@hilltop.co.in</a></p>
-        <p><a href="#">(555) 555-1212</a></p>
+        <p><a href="#" class="font-link">hilltop@hilltop.co.in</a></p>
+        <p><a href="#" class="font-link">(555) 555-1212</a></p>
         
         <nav class="social-nav">
             <ul>
@@ -653,7 +655,7 @@
             </ul>
         </nav>
 
-        <p class="copyright">Copyright &copy; <span id="copy"></span> HillTop</p>
+        <p class="copyright font-small">Copyright &copy; <span id="copy" class="font-small"></span> HillTop</p>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>

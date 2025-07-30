@@ -233,16 +233,16 @@
 }
 
 @media (width < 23rem){
+    .card-section{
+        padding-inline: 0.5rem;
+    }
+
     .three-card-container, .two-card-container{
-        padding: 0;
+        padding-inline: 0.5rem;
     }
 
     .three-card-container .card{
         padding: 0.2rem;
-    }
-
-    .three-card-container img, .two-card-container img{
-        margin: 0;
     }
 }
 
@@ -252,34 +252,43 @@
         padding-inline: 0.5rem;
     }
 
-    .two-column .image{
-        width: 95%;
-    }
-
-    .two-column img{
-        margin: 0;
-        width: 100%;
-    }
-
     .two-column .column-content{
         padding-inline: 0.7rem;
     }
+}
 
-    .two-column .column-content p{
-        width: 84%;
+@media (width < 36rem){
+    :root{
+        --font-0: calc(1.15rem - 0.3rem);
+        --font-1: calc(2rem - 0.3rem);
+        --font-2: calc(2.3125rem - 0.3rem);
+        --font-3: calc(2.68rem - 0.3rem);
+        --font-heading: calc(2.1rem - 0.3rem);
+        --font-link: calc(1.1875rem  0.3rem);
+        --font-button: calc(1.45rem - 0.3rem);
+        --font-label: calc(1.375rem - 0.3rem);
+    }
+    
+    form{
+        padding: 1rem;
+    }
+
+    .two-column .column-content h3{
+        text-align: center;
     }
 }
 
-@media (width < 576px){
-    .font-small{
-        font-size: var(--font-d-m-0);
+@media (1023px < width < 1046px){
+    .social-item a{
+        width: 3.1rem;
     }
+}
 
-    .font-h4{
-        font-size: var(--font-d-m-1);
-    }
+/* Testimonial */
+@media (width < 960px){
 
-    .font-h3{
-        font-size: var(--font-d-m-2);
+    .testimonial-slider-section .slider-controls{
+        align-items: flex-end;
+        transform: translateY(40px);
     }
 }

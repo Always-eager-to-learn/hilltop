@@ -1,10 +1,8 @@
 /* Primary - logo */
 .primary-logo{
     text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-4);
     font-weight: 700;
     color: var(--brand-color);
-    font-size: var(--font-size-fluid-2);
 }
 
 /* Social Nav */
@@ -16,12 +14,6 @@
 .primary-nav > ul > li > a{
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: var(--font-weight-5);
-    letter-spacing: var(--font-letterspacing-3);
-}
-
-.primary-nav > ul > li > a{
-    font-size: var(--font-size-fluid-1);
 }
 
 .search-drawer.active{
@@ -34,9 +26,26 @@
     top: 5rem;
 }
 
-.open-search > .ionicon, .search-button > .ionicon{
-    display: block;
-    width: 2.3rem;
+.open-search > .ionicon{
+    fill: transparent;
+}
+
+.open-search > .ionicon > path{
+    stroke: var(--brand-color);
+    transition: stroke 300ms var(--ease-in-out-3);
+}
+
+.open-search{
+    background-color: transparent;
+    transition: background-color 300ms var(--ease-in-out-3);
+}
+
+.open-search:hover{
+    background-color: var(--brand-color);
+}
+
+.open-search:hover > .ionicon > path{
+    stroke: #f4f4f4;
 }
 
 .search-form{
