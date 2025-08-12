@@ -200,23 +200,23 @@
         <h1 class="primary-logo font-heading">
             HillTop
         </h1>
-        <button class="mobile-nav" aria-label="Open Menu Bar">
-            <div></div>
-            <div></div>
-            <div></div>
+        <button class="mobile-nav" aria-label="Open Menu Bar" aria-controls="mainNavigation">
+            <div aria-hidden="true"></div>
+            <div aria-hidden="true"></div>
+            <div aria-hidden="true"></div>
         </button>
-        <nav class="primary-nav">
-            <button class="mobile-close-nav" aria-label="Close Menu Bar">
-                <div></div>
-                <div></div>
+        <nav class="primary-nav" id="mainNavigation">
+            <button class="mobile-close-nav" aria-label="Close Menu Bar" aria-controls="mainNavigation">
+                <div aria-hidden="true"></div>
+                <div aria-hidden="true"></div>
             </button>
             <ul>
-                <li class="nav-item"><a class="hover-link font-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="hover-link font-link" href="#">Portfolio</a></li>
-                <li class="nav-item"><a class="hover-link font-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="hover-link font-link" href="#">About</a></li>
-                <li class="nav-item"><a class="hover-link font-link" href="#">Service</a></li>
-                <li class="nav-item"><a class="hover-link font-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#works">Portfolio</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#bloginfo">Blog</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#aboutinfo">About</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#interests">Interests</a></li>
+                <li class="nav-item"><a class="hover-link font-link" href="#contactinfo">Contact</a></li>
             </ul>
 
             <ul class="social-nav">
@@ -283,7 +283,7 @@
     </header>
     <main class="main">
         <!-- Slider Content -->
-        <section class="slider">
+        <section class="slider" id="home">
             <div class="slider-controls">
                 <button class="slider-button slider-left" aria-label="Slide the image to the left">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
@@ -315,7 +315,7 @@
         </section>
 
         <!-- Three Card Section -->
-        <section class="card-section">
+        <section class="card-section" id="interests">
             <div class="card-heading">
                 <h3 class="primary-heading font-h3">Hilltop Creative</h3>
                 <p class="font-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -386,7 +386,7 @@
                 </picture>
             </figure>
             <div class="column-content">
-                <h3 class="font-h3">Healthy  Morning</h3>
+                <h3 class="font-h3">Healthy Morning</h3>
                 <p class="font-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quae rerum eos explicabo quaerat inventore blanditiis, assumenda.</p>
                 <p class="font-small">Labore odit asperiores sequi magnam pariatur fugit fuga suscipit expedita repellendus iusto quo minima! Aliquam nobis repellendus minima.</p>
                 <p class="font-small">Iste necessitatibus nostrum dolorum nisi aliquid odit voluptatum voluptas perferendis, inventore fugit, impedit magnam aut quod. Minima, commodi! Et, quos.</p>
@@ -394,7 +394,7 @@
         </section>
 
         <!-- Three column section -->
-        <section class="card-section">
+        <section class="card-section" id="aboutinfo">
             <div class="card-heading">
                 <h3 class="primary-heading font-h3">MEET OUR TEAM</h3>
                 <p class="font-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptas totam molestiae debitis alias.</p>
@@ -448,7 +448,7 @@
         </section>
 
         <!-- Overlay section -->
-        <section class="overlay-hover-section">
+        <section class="overlay-hover-section" id="works">
             <div class="card-heading">
                 <h3 class="font-h3">Featured Works</h3>
                 <p class="font-small">Lorem ipsum dolor sit amet.</p>
@@ -537,7 +537,7 @@
         </section>
 
         <!-- Three column section -->
-        <section class="card-section">
+        <section class="card-section" id="bloginfo">
             <div class="card-heading">
                 <h3 class="font-h3">Latest Post</h3>
                 <p class="font-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque totam assumenda, quae libero cumque. Similique labore natus suscipit assumenda!</p>
@@ -604,7 +604,7 @@
         </section>
 
         <!-- Contact Info Card -->
-        <section class="contact-info two-column">
+        <section class="contact-info two-column" id="contactinfo">
             <figure class="image">
                 <picture>
                     <source srcset="./src/images/help-image.webp">

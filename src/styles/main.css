@@ -49,7 +49,6 @@
 
 .slider-content-container .button{
     text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-4);
     color: #FAFAFA;
     background-color: var(--brand-color);
     outline-color: var(--brand-color);
@@ -73,8 +72,6 @@
 .slider-controls > *{
     height: auto;
     border: none;
-    background-color: transparent;
-    transition: background-color 350ms var(--ease-in-3);
     border-radius: var(--radius-3);
 }
 
@@ -83,7 +80,7 @@
     outline-offset: -2px;
     outline-color: var(--brand-color);
     outline-style: solid;
-    transition: outline-offset 350ms var(--ease-elastic-out-2);
+    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-out-3);
 }
 
 .slider-button:hover,

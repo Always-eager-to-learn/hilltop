@@ -25,12 +25,23 @@
     }
 
     .mobile-nav > *{
-        width: 2.1rem;
         height: 0.3rem;
         background-color: var(--stone-11);
         margin: 0.3rem 0;
         transition: background-color 350ms var(--ease-in-out-3);
         position: relative;
+    }
+
+    .mobile-nav div:nth-child(1){
+        width: 1.5rem;
+    }
+
+    .mobile-nav div:nth-child(2){
+        width: 2.1rem;
+    }
+
+    .mobile-nav div:nth-child(3){
+        width: 1.1rem;
     }
 
     .mobile-close-nav{
@@ -59,11 +70,8 @@
         transform-origin: center;
     }
 
-    .mobile-nav:hover,
-    .mobile-nav:focus,
-    .mobile-nav:active{
+    .mobile-nav:focus{
         background-color: var(--stone-10);
-        outline: none;
     }
 
     .mobile-nav:hover > *,
@@ -85,27 +93,37 @@
         outline: none;
     }
 
+    @media (hover : hover){
+        .mobile-nav:hover{
+            background-color: var(--stone-10);
+        }
+    }
+
     .primary-nav{
         position: fixed;
         height: 100vh;
         top: 0;
         right: 0;
         width: 300px;
-        max-width: 100%;
         z-index: 2;
         background-color: var(--gray-1);
-        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-        transition: 
-                transform 550ms var(--ease-in-out-3);
-        visibility: hidden;
         transform: translateX(300px);
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        opacity: 0.3;
+        visibility: hidden;
+        transition:
+                transform 550ms var(--ease-in-out-3),
+                filter 450ms var(--ease-in-3),
+                opacity 300ms var(--ease-out-3),
+                visibility 0ms 550ms;
     }
 
     .primary-nav.active{
-        visibility: visible;
         transform: translateX(0px);
         filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));
-        transition: transform 550ms var(--ease-in-out-3);
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0ms;
     }
 
     .primary-nav.active ul{
@@ -133,6 +151,17 @@
     /* Overlay hover section */
     .overlay-hover-section .button{
         width: 95%;
+    }
+
+    /* Two column */
+    .two-column{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+    
+    .two-column img{
+        aspect-ratio: 8 / 4;
     }
 }
 
@@ -291,4 +320,8 @@
         align-items: flex-end;
         transform: translateY(40px);
     }
+}
+
+.mobile-nav:active{
+    transform: translateY(2px);
 }

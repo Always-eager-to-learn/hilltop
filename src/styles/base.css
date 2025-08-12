@@ -223,3 +223,8 @@ a.button{
 .margin-1-5, p.margin-1-5{
     margin-block-start: 1.5rem;
 }
+
+.primary-nav a.active{
+    border-bottom-color: var(--brand-color);
+    color: var(--brand-color);
+}
