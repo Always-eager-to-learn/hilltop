@@ -63,7 +63,6 @@
 
 .search-form-first > label{
     padding-inline: 6px;
-    font-size: 1.2rem;
 }
 
 .search-form-second{
@@ -77,20 +76,25 @@
     border: none;
     outline: 2px solid var(--black);
     border-radius: 9px;
-    color: var(--black);
+    background-color: var(--gray-1);
 }
 
 .search-close{
     background-color: inherit;
     padding: 0.1rem 0.2rem 0;
+    transition: background-color 350ms var(--ease-in-out-3)
 }
 
 .search-close > .ionicon{
     width: 2.2rem;
 }
 
-.search-close > .ionicon > path:hover{
-    stroke: var(--mid-gray);
+.search-close:hover{
+    background-color: var(--gray-8);
+}
+
+.search-close:hover > .ionicon > path{
+    stroke: var(--white);
 }
 
 /* Links */

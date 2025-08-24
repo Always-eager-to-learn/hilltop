@@ -236,25 +236,25 @@
         </nav>
 
         <section class="header-right">
-            <button class="open-search" aria-label="Open search field">
+            <button class="open-search" aria-label="Open search field" aria-controls="searchDrawer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" stroke-width="32"/><path d="M232 160a72 72 0 1072 72 72 72 0 00-72-72z" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M283.64 283.64L336 336"/></svg>
             </button>
 
             <div class="search-drawer">
 
-                <form action="#" class="search-form">
+                <form id="searchDrawer" action="#" class="search-form">
                     <section class="search-form-first">
-                        <label for="search">
+                        <label for="search" class="font-link">
                             Search this site: 
                         </label>
                         
-                        <button class="search-close" aria-label="Close search field" type="button">
+                        <button class="search-close" aria-label="Close search field" type="button" aria-controls="searchDrawer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
                         </button>
                     </section>
 
                     <section class="search-form-second">
-                        <input type="search" name="search-field" id="search" class="search-input" minlength="3" required>
+                        <input type="search" name="search-field" id="search" class="search-input font-input" minlength="3" required>
                         <button aria-label="Search button" class="search-button" type="submit">
                             <svg aria-hidden='true' xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" stroke-width="32"/><path d="M232 160a72 72 0 1072 72 72 72 0 00-72-72z" stroke-miterlimit="10" stroke-width="32"/><path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M283.64 283.64L336 336"/></svg>
                         </button>

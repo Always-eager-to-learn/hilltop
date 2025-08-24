@@ -112,9 +112,9 @@
         opacity: 0.3;
         visibility: hidden;
         transition:
-                transform 550ms var(--ease-in-out-3),
+                transform 650ms var(--ease-in-out-3),
                 filter 450ms var(--ease-in-3),
-                opacity 300ms var(--ease-out-3),
+                opacity 300ms 450ms var(--ease-out-3),
                 visibility 0ms 550ms;
     }
 
@@ -126,11 +126,10 @@
         transition-delay: 0ms;
     }
 
-    .primary-nav.active ul{
+    .primary-nav ul:first-of-type{
         flex-direction: column;
         padding-block: 1.2rem;
-        padding-inline: 1.5rem;
-        margin-top: 5.75rem;
+        margin-top: 4rem;
     }
 
     .header-right{
@@ -228,7 +227,7 @@
     }
 
     .primary-nav .social-nav{
-        display: block;
+        display: flex;
     }
 }
 
@@ -319,6 +318,12 @@
     .testimonial-slider-section .slider-controls{
         align-items: flex-end;
         transform: translateY(40px);
+    }
+}
+
+@media (width < 21.875rem){
+    .search-drawer{
+        transform: translateX(14px);
     }
 }
 

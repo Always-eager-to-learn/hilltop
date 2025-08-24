@@ -31,6 +31,7 @@ a{
 
 .ionicon > path{
     stroke: var(--black);
+    transition: stroke 400ms var(ease-in-out-3);
 }
 
 .slider-controls{
