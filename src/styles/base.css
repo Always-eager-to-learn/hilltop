@@ -189,6 +189,10 @@ label{
     letter-spacing: -0.005em;
 }
 
+.noto-font{
+    font-family: 'Noto Sans';
+}
+
 /* Common classes */
 a.button{
     display: inline-block;
@@ -221,10 +225,27 @@ a.button{
 
 .ionicon > path{
     stroke: var(--black);
-    transition: stroke 400ms var(ease-in-out-3);
+    transition: stroke 400ms var(--ease-in-out-3);
 }
 
 .dark-section{
     background-color: var(--sand-10);
     color: var(--camo-0);
+}
+
+:is(.slider-button, social-item a){
+    outline-offset: -0.125rem;
+    outline-style: solid;
+}
+
+.slider-button{
+    width: 3.5rem;
+    height: 3.125rem;
+    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-3), transform 300ms var(--ease-out-3);
+}
+
+.slider-button .lucide,
+.slider-button .ionicon{
+    fill: transparent;
+    width: 80%;
 }

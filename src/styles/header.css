@@ -32,7 +32,6 @@
 
 .open-search > .ionicon > path{
     stroke: var(--brand-color);
-    transition: stroke 300ms var(--ease-in-out-3);
 }
 
 .open-search{
@@ -40,7 +39,9 @@
     outline-color: transparent;
     outline-style: solid;
     outline-offset: -0.2rem;
-    transition: background-color 300ms var(--ease-in-out-3), transform 350ms var(--ease-in-3), outline-offset 350ms var(--ease-in-2);
+    transform-origin: center;
+    will-change: transform;
+    transition: background-color 300ms var(--ease-in-out-3), transform 350ms var(--ease-out-3), outline-offset 350ms var(--ease-in-2);
 }
 
 .open-search:active{
@@ -129,7 +130,7 @@
     transition: 
         border-bottom 350ms var(--ease-in-out-3),
         color 270ms var(--ease-in-3),
-        transform 250ms var(--ease-in-out-3),
+        transform 250ms var(--ease-out-3),
         outline-color 300ms var(--ease-out-3),
         outline-offset 300ms var(--ease-in-2);
 }
@@ -166,6 +167,19 @@
     padding: 0.3em;
     transition: transform 350ms var(--ease-in-2);
     border-radius: var(--radius-3);
+}
+
+/* Social Items */
+.social-item a{
+    transition: transform 300ms var(--ease-out-3);
+}
+
+.social-item a:focus-visible{
+    outline-offset: 0.125rem;
+}
+
+.social-item a:active{
+    transform: scale(0.8);
 }
 
 @media (hover : hover){

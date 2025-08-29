@@ -1,5 +1,4 @@
 /* Slider */
-
 .slider{
     display: grid;
     grid-template-areas: 'stack';
@@ -16,8 +15,6 @@
     margin-inline: 0.5rem;
     display: flex;
     justify-content: center;
-    width: 4rem;
-    height: 3.125rem;
 }
 
 .slider .slider-right{
@@ -77,7 +74,7 @@
 
 .slider-content-container p:first-of-type{
     margin-block-start: 0.4rem;
-    margin-block-end: 2rem;
+    margin-block-end: 1.5rem;
 }
 
 .slider-content-container p:last-child{
@@ -110,36 +107,19 @@
 }
 
 .slider-button{
-    height: auto;
     border: none;
     border-radius: var(--radius-3);
+    will-change: transform;
 }
 
 .slider .slider-button{
     background-color: var(--brand-color);
-    outline-offset: -2px;
     outline-color: var(--brand-color);
-    outline-style: solid;
-    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-3), transform 350ms var(--ease-in-out-3);
-}
-
-.slider-button .lucide{
-    fill: transparent;
-    width: 80%;
 }
 
 .slider-controls .ionicon path{
     stroke: #f4f4f4;
     transition: stroke 250ms var(--ease-3);
-}
-
-.slider-button:hover{
-    background-color: var(--choco-1);
-}
-
-.slider-button:hover .lucide path,
-.slider-button:active .lucide path{
-    stroke: var(--gray-10);
 }
 
 .slider-button:focus-visible{
@@ -150,7 +130,7 @@
 
 .slider-button:active{
     background-color: var(--indigo-0);
-    transform: scale(0.73);
+    transform: scale(0.8);
 }
 
 /* Card contents */
@@ -310,10 +290,25 @@
     padding: 3.5rem 1.3rem;
     background-color: var(--sand-10);
     color: var(--choco-0);
-    height: auto;
-    width: 100%;
-    z-index: 1;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.testimonial-slider-section .slider-button{
+    outline-color: transparent;
+}
+
+.testimonial-slider-section .slider-left{
+    justify-self: end;
+}
+
+.testimonial-slider-section .slider-right{
+    grid-column-start: 3;
+}
+
+.testimonial-slider-section ul{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
 }
 
 .testimonial-slider-section ul::before{
@@ -327,10 +322,6 @@
 
 .testimonial-slider-section ul{
     list-style-type: none;
-}
-
-.testimonial-slider-section .slider-controls{
-    z-index: 0;
 }
 
 .testimonial{
@@ -400,5 +391,14 @@
     .slider-content-container .button:hover{
         background-color: #f4f4f4;
         color: var(--brand-color);
+    }
+
+    .slider-button:hover{
+        background-color: var(--choco-1);
+    }
+
+    .slider-button:hover .lucide path,
+    .slider-button:active .lucide path{
+        stroke: var(--gray-10);
     }
 }
