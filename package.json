@@ -12,6 +12,7 @@
     "vite": "^7.0.4"
   },
   "dependencies": {
+    "lucide": "^0.542.0",
     "open-props": "^1.7.16"
   }
 }

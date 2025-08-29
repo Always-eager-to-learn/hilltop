@@ -29,23 +29,6 @@ a{
     margin: 0;
 }
 
-.ionicon > path{
-    stroke: var(--black);
-    transition: stroke 400ms var(ease-in-out-3);
-}
-
-.slider-controls{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.2rem;
-}
-
-.dark-section{
-    background-color: var(--sand-10);
-    color: var(--camo-0);
-}
-
 blockquote, cite{
     border: none;
 }
@@ -228,4 +211,20 @@ a.button{
 .primary-nav a.active{
     border-bottom-color: var(--brand-color);
     color: var(--brand-color);
+}
+
+.lucide{
+    display: block;
+    stroke: white;
+    user-select: none;
+}
+
+.ionicon > path{
+    stroke: var(--black);
+    transition: stroke 400ms var(ease-in-out-3);
+}
+
+.dark-section{
+    background-color: var(--sand-10);
+    color: var(--camo-0);
 }

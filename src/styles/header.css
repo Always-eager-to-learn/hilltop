@@ -37,15 +37,21 @@
 
 .open-search{
     background-color: transparent;
-    transition: background-color 300ms var(--ease-in-out-3);
+    outline-color: transparent;
+    outline-style: solid;
+    outline-offset: -0.2rem;
+    transition: background-color 300ms var(--ease-in-out-3), transform 350ms var(--ease-in-3), outline-offset 350ms var(--ease-in-2);
 }
 
-.open-search:hover{
+.open-search:active{
     background-color: var(--brand-color);
+    transform: scale(0.8);
 }
 
-.open-search:hover > .ionicon > path{
-    stroke: #f4f4f4;
+.open-search:focus-visible{
+    outline-offset: 0.10rem;
+    outline-width: 0.4rem;
+    outline-color: var(--brand-color);
 }
 
 .search-form{
@@ -82,18 +88,32 @@
 .search-close{
     background-color: inherit;
     padding: 0.1rem 0.2rem 0;
-    transition: background-color 350ms var(--ease-in-out-3)
+    border-radius: var(--radius-2);
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: -0.115rem;
+    transition: background-color 350ms var(--ease-in-out-3),
+                outline-offset 300ms var(--ease-in-2),
+                outline-color 300ms var(--ease-in-2),
+                transform 300ms var(--ease-out-3);
 }
 
 .search-close > .ionicon{
     width: 2.2rem;
 }
 
-.search-close:hover{
+.search-close:focus-visible{
+    outline-offset: 0.115rem;
+    outline-width: 0.4rem;
+    outline-color: var(--brand-color);
+}
+
+.search-close:active{
+    transform: scale(0.85);
     background-color: var(--gray-8);
 }
 
-.search-close:hover > .ionicon > path{
+.search-close:active > .ionicon > path{
     stroke: var(--white);
 }
 
@@ -103,18 +123,26 @@
 .hover-link:visited{
     border-bottom: 3.2px solid transparent;
     color: var(--stone-9);
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: -0.115rem;
     transition: 
         border-bottom 350ms var(--ease-in-out-3),
         color 270ms var(--ease-in-3),
-        transform 250ms var(--ease-in-out-3);
+        transform 250ms var(--ease-in-out-3),
+        outline-color 300ms var(--ease-out-3),
+        outline-offset 300ms var(--ease-in-2);
 }
 
-.hover-link:hover,
-.hover-link:focus,
 .hover-link:active{
+    transform: scale(0.88);
+}
+
+.hover-link:focus-visible{
     border-bottom-color: var(--brand-color);
-    color: var(--brand-color);
-    transform: scale(1.05) translateY(-2px);
+    outline-offset: 0.2rem;
+    outline-width: 0.3rem;
+    outline-color: var(--indigo-6);
 }
 
 /* Github links */
@@ -140,6 +168,30 @@
     border-radius: var(--radius-3);
 }
 
-.github_link:hover::after{
-    transform: scale(1, 1);
+@media (hover : hover){
+    .open-search:hover{
+        background-color: var(--brand-color);
+    }
+    
+    .open-search:hover > .ionicon > path{
+        stroke: #f4f4f4;
+    }
+
+    .search-close:hover{
+        background-color: var(--gray-8);
+    }
+    
+    .search-close:hover > .ionicon > path{
+        stroke: var(--white);
+    }
+
+    .github_link:hover::after{
+        transform: scale(1, 1);
+    }
+
+    .hover-link:hover{
+        border-bottom-color: var(--brand-color);
+        color: var(--brand-color);
+        transform: scale(1.05) translateY(-2px);
+    }
 }

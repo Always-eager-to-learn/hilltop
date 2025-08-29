@@ -1,13 +1,33 @@
 /* Slider */
 
-.slider .slider-controls{
+.slider{
+    display: grid;
+    grid-template-areas: 'stack';
+    grid-template-columns: 1fr 6fr 1fr;
+    gap: 1.3rem 0;
+}
+
+.slider .slider-button {
+    grid-area: stack;
+    position: relative;
     z-index: 1;
+    align-self: center;
+    justify-self: center;
+    margin-inline: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 3.125rem;
+}
+
+.slider .slider-right{
+    grid-column-start: 3;
+    grid-column-end: 3;
 }
 
 .slider-content-container{
     background-color:rgba(255, 240, 246, 0.866);
     text-align: center;
-    z-index: 2;
     color: var(--sand-12);
     backdrop-filter: blur(2px);
     display: flex;
@@ -25,6 +45,23 @@
     height: calc(100% - 3rem);
     border: 2px solid var(--black);
     z-index: -2;
+}
+
+.slider .slider-image{
+    opacity: 0;
+    transition: opacity 350ms var(--ease-in-out-3);
+    pointer-events: none;
+    grid-area: top;
+}
+
+.slider .slider-image.active{
+    opacity: 1;
+}
+
+.slider-content{
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center;
 }
 
 .slider-heading{
@@ -57,42 +94,38 @@
     transition: 
             background-color 350ms var(--ease-in-out-2),
             color 325ms var(--ease-in-out-2),
-            outline-offset 300ms var(--ease-elastic-out-2);
+            outline-offset 300ms var(--ease-elastic-out-2),
+            transform 300ms var(--ease-out-3);
     border: none;
 }
 
-.slider-content-container .button:hover,
-.slider-content-container .button:focus,
-.slider-content-container .button:active{
-    background-color: #f4f4f4;
-    color: var(--brand-color);
-    outline-offset: 1px;
+.slider-content-container .button:focus-visible{
+    outline-color: var(--choco-11);
+    outline-offset: 0.15rem;
+    outline-width: 0.35rem;
 }
 
-.slider-controls > *{
+.slider-content-container .button:active{
+    transform: scale(0.88);
+}
+
+.slider-button{
     height: auto;
     border: none;
     border-radius: var(--radius-3);
 }
 
-.slider .slider-controls > *{
+.slider .slider-button{
     background-color: var(--brand-color);
     outline-offset: -2px;
     outline-color: var(--brand-color);
     outline-style: solid;
-    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-out-3);
+    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-3), transform 350ms var(--ease-in-out-3);
 }
 
-.slider-button:hover,
-.slider-button:active,
-.slider-button:focus{
-    background-color: var(--choco-1);
-    outline-offset: 1px;
-}
-
-.slider-controls .ionicon{
+.slider-button .lucide{
     fill: transparent;
-    width: 100%;
+    width: 80%;
 }
 
 .slider-controls .ionicon path{
@@ -100,10 +133,24 @@
     transition: stroke 250ms var(--ease-3);
 }
 
-.slider-button:hover .ionicon path,
-.slider-button:focus .ionicon path,
-.slider-button:active .ionicon path{
-    stroke: var(--gray-8)
+.slider-button:hover{
+    background-color: var(--choco-1);
+}
+
+.slider-button:hover .lucide path,
+.slider-button:active .lucide path{
+    stroke: var(--gray-10);
+}
+
+.slider-button:focus-visible{
+    outline-offset: 1px;
+    outline-color: var(--pink-0);
+    outline-width: 0.5rem;
+}
+
+.slider-button:active{
+    background-color: var(--indigo-0);
+    transform: scale(0.73);
 }
 
 /* Card contents */
@@ -347,4 +394,11 @@
 .contact-form .button:focus{
     background-color: transparent;
     color: var(--gray-11);
+}
+
+@media (hover : hover){
+    .slider-content-container .button:hover{
+        background-color: #f4f4f4;
+        color: var(--brand-color);
+    }
 }
