@@ -249,3 +249,15 @@ a.button{
     fill: transparent;
     width: 80%;
 }
+
+.slider :is(.slider-image, .testimonial){
+    opacity: 0;
+    transition: opacity 350ms var(--ease-in-out-3);
+    pointer-events: none;
+    grid-area: top;
+}
+
+
+.slider :is(.slider-image, .testimonial).active{
+    opacity: 1;
+}

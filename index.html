@@ -164,7 +164,6 @@
             padding: 0.5em;
         }
         .three-card-container{
-            max-width: 80rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.2em;
@@ -273,8 +272,8 @@
     <main class="main">
         <!-- Slider Content -->
         <section class="slider" id="home">
-            <button class="slider-button slider-left" aria-label="Slide the image to the left"></button>
-            <button class="slider-button slider-right" aria-label="Slide the image to the right"></button>
+            <button class="slider-button slider-left" aria-label="Slide the image to the left" data-item="image"></button>
+            <button class="slider-button slider-right" aria-label="Slide the image to the right" data-item="image"></button>
             
             <ul>
                 <li class="slider-image">
@@ -401,7 +400,7 @@
 
             <div class="three-card-container">
                 <article class="card">
-                    <figure class="image ">
+                    <figure class="image animal">
                         <picture>
                             <source srcset="./src/images/dog-image.webp" type="image/webp">
                             <img src="./src/images/dog-image.jpg" alt="Image of a dog" loading="lazy">
@@ -415,7 +414,7 @@
                 </article>
     
                 <article class="card">
-                    <figure class="image">
+                    <figure class="image animal">
                         <picture>
                             <source srcset="./src/images/heidi.webp" type="image/webp">
                             <img src="./src/images/heidi.webp" alt="Image of heidi staring out the window." loading="lazy">
@@ -429,7 +428,7 @@
                 </article>
     
                 <article class="card">
-                    <figure class="image">
+                    <figure class="image animal">
                         <picture>
                             <source srcset="./src/images/cat-image.webp" type="image/webp">
                             <img src="./src/images/cat-image.jpg" alt="Image of a cat raising it's paw" loading="lazy">
@@ -512,11 +511,11 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="testimonial-slider-section">
-            <button aria-label="Slide the testimonial to the left" class="slider-button slider-left">
+        <section class="testimonial-slider-section slider">
+            <button aria-label="Slide the testimonial to the left" class="slider-button slider-left" data-item="testimonial">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
             </button>
-            <button aria-label="Slide the testimonial to the right" class="slider-button slider-right">
+            <button aria-label="Slide the testimonial to the right" class="slider-button slider-right" data-item="testimonial">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
             </button>
             <ul>
@@ -527,7 +526,22 @@
                         <p class="font-small">Natus suscipit deleniti quos, doloremque iusto beatae!</p>
                         <p class="center font-small"><cite>George Bernard Shaw</cite></p>
                     </blockquote>
-                    
+                </li>
+                <li class="testimonial">
+                    <blockquote>
+                        <p class="font-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ducimus, recusandae iste possimus dolorem, ut blanditiis dicta ab</p>
+                        <p class="font-small">Eveniet animi expedita saepe fugit ea. Unde quas quod magni nisi minima pariatur reprehenderit alias nihil, fugit ducimus quos corporis dicta inventore odit fugiat maxime.</p>
+                        <p class="font-small">Maxime earum corrupti, alias totam natus culpa delectus cum nam nisi.</p>
+                        <p class="center font-small"><cite>Ruffer Rodrigu</cite></p>
+                    </blockquote>
+                </li>
+                <li class="testimonial">
+                    <blockquote>
+                        <p class="font-small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, sequi.</p>
+                        <p class="font-small">Nulla odit tempore ducimus. Lorem, ipsum dolor.</p>
+                        <p class="font-small">Quisquam ipsam similique distinctio quas natus. Neque tempore necessitatibus, rem eligendi est nihil sed magni adipisci harum!</p>
+                        <p class="font-small">orro, voluptates? Ducimus nisi quas perspiciatis laudantium aut consectetur veritatis aliquam voluptatum.</p>
+                    </blockquote>
                 </li>
             </ul>
         </section>
@@ -655,4 +669,4 @@
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
-</html> 
+</html>

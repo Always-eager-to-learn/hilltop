@@ -13,14 +13,15 @@ const navigationIcons = document.querySelectorAll('.nav-item a')
 const searchOpen = document.querySelector('.open-search')
 const searchClose = document.querySelector('.search-close')
 const searchDrawer = document.querySelector('.search-drawer')
-const sliderLeft = document.querySelector('.slider-left')
-const sliderRight = document.querySelector('.slider-right')
-const slider = document.querySelector('.slider')
-const sliderItems = document.querySelectorAll('.slider-image')
-const totSlides = sliderItems.length
+const sliderLeftButtons = document.querySelectorAll('.slider-left')
+const sliderRightButtons = document.querySelectorAll('.slider-right')
+const dictSliders = {
+    'image': 0,
+    'testimonial': 1
+}
 
-let currentLocation = Math.floor(Math.random() * 3)
 let location = 0
+let sliderList, sliderLength, sliderLocation;
 
 function toggle(location = 0){
     navigationIcons[location].classList.toggle('active')
@@ -30,14 +31,14 @@ function setSvg(){
     const svgL = document.createElement('i')
     svgL.setAttribute('data-lucide', 'arrow-big-left-dash')
     svgL.setAttribute('aria-hidden', true)
-    sliderLeft.append(svgL)
+    sliderLeftButtons[0].append(svgL)
 
     const svgR = document.createElement('i')
     svgR.setAttribute('data-lucide', 'arrow-big-right-dash')
     svgR.setAttribute('aria-hidden', true)
-    sliderRight.append(svgR)
+    sliderRightButtons[0].append(svgR)
 
-    createIcons({icons})
+    createIcons({ icons })
 }
 
 function toggleNavigation(element){
@@ -87,38 +88,70 @@ function searchBar(){
     })
 }
 
+function setLength(){
+    let length = Object.keys(sliderList).length
+    let lengthArray = []
+    for(let i = 0; i < length; i++){
+        lengthArray.push(sliderList[i].length)
+    }
+
+    return lengthArray
+}
+
+function randomPosition(){
+    sliderLength.forEach((element, index) => {
+        const randNum = Math.floor(Math.random() * element)
+        sliderLocation[index] = randNum
+        sliderList[index][randNum].classList.add('active')
+    })
+}
+
 function slideImages(){
-    
-    if(slider && sliderItems.length > 0){
-        const updateSlider = (left) => {
-            sliderItems[currentLocation].classList.remove('active')
+    const updateSlider = (left, targetName) => {
+        console.log(targetName)
+        const targetNum = dictSliders[targetName]
+        let locationS = sliderLocation[targetNum]
+        const item = sliderList[targetNum]
+        item[locationS].classList.remove('active')
 
-            if(!left){
-                currentLocation = (currentLocation + 1) % totSlides
-                sliderItems[currentLocation].classList.add('active')
-            }
-
-            else{
-                currentLocation = (currentLocation - 1)
-                if(currentLocation < 0)
-                    currentLocation = totSlides - 1
-                sliderItems[currentLocation].classList.add('active')
-            }
+        if(!left){
+            locationS = (locationS + 1) % sliderLength[targetNum]
+            item[locationS].classList.add('active')
         }
 
-        sliderLeft.addEventListener('click', () => {
-            updateSlider(true)
-        })
+        else{
+            locationS = (locationS - 1)
+            if(locationS < 0)
+                locationS = sliderLength[targetNum] - 1
+            item[locationS].classList.add('active')
+        }
 
-        sliderRight.addEventListener('click', () => {
-            updateSlider(false)
-        })
+        sliderLocation[targetNum] = locationS
     }
+
+    sliderLeftButtons.forEach((sliderLeft) => {
+        sliderLeft.addEventListener('click', (event) => {
+            updateSlider(true, event.currentTarget.dataset.item)
+        })
+    })
+
+    sliderRightButtons.forEach((sliderRight) => {
+        sliderRight.addEventListener('click', (event) => {
+            updateSlider(false, event.currentTarget.dataset.item)
+        })
+    })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    sliderList = {
+        0: document.querySelectorAll('.slider-image'), 
+        1: document.querySelectorAll('.testimonial')
+    }
+    sliderLength = setLength()
+    sliderLocation = [0, 0]
+
     navigationIcons[0].classList.toggle('active')
-    sliderItems[currentLocation].classList.toggle('active')
+    randomPosition()
 
     setSvg()
     navigationBarSettings()

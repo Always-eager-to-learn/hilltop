@@ -44,17 +44,6 @@
     z-index: -2;
 }
 
-.slider .slider-image{
-    opacity: 0;
-    transition: opacity 350ms var(--ease-in-out-3);
-    pointer-events: none;
-    grid-area: top;
-}
-
-.slider .slider-image.active{
-    opacity: 1;
-}
-
 .slider-content{
     grid-column-start: 2;
     align-self: center;
@@ -299,7 +288,7 @@
 }
 
 .testimonial-slider-section .slider-left{
-    justify-self: end;
+    justify-self: center;
 }
 
 .testimonial-slider-section .slider-right{
@@ -308,7 +297,7 @@
 
 .testimonial-slider-section ul{
     grid-column: 1 / -1;
-    grid-row: 1 / -1;
+    grid-row: 2 / -1;
 }
 
 .testimonial-slider-section ul::before{
@@ -318,6 +307,7 @@
     text-align: center;
     color: var(--sand-0);
     line-height: 0.9;
+    grid-row-start: 1;
 }
 
 .testimonial-slider-section ul{

@@ -245,6 +245,10 @@
         aspect-ratio: 5 / 7;
     }
 
+    .three-card-container .card .animal img{
+        aspect-ratio: 1 / 0.9;
+    }
+
     .three-card-container .card:nth-child(2n){
         flex-direction: row-reverse;
         padding: 1.5rem;
