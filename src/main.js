@@ -108,7 +108,6 @@ function randomPosition(){
 
 function slideImages(){
     const updateSlider = (left, targetName) => {
-        console.log(targetName)
         const targetNum = dictSliders[targetName]
         let locationS = sliderLocation[targetNum]
         const item = sliderList[targetNum]
@@ -148,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         1: document.querySelectorAll('.testimonial')
     }
     sliderLength = setLength()
-    sliderLocation = [0, 0]
+    sliderLocation = sliderLength.map(() => 0)
 
     navigationIcons[0].classList.toggle('active')
     randomPosition()
