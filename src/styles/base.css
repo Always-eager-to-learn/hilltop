@@ -193,6 +193,14 @@ label{
     font-family: 'Noto Sans';
 }
 
+.color-black{
+    color: var(--black);
+}
+
+.font-capitalize{
+    text-transform: capitalize;
+}
+
 /* Common classes */
 a.button{
     display: inline-block;
@@ -233,15 +241,16 @@ a.button{
     color: var(--camo-0);
 }
 
-:is(.slider-button, social-item a){
+:is(.slider-button, social-item a, .contact-form .button, .social-item a){
     outline-offset: -0.125rem;
     outline-style: solid;
+    outline-color: transparent;
 }
 
 .slider-button{
-    width: 3.5rem;
-    height: 3.125rem;
-    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 350ms var(--ease-in-3), transform 300ms var(--ease-out-3);
+    width: 4.2rem;
+    height: 4rem;
+    transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 300ms var(--ease-out-3), transform 300ms var(--ease-out-3);
 }
 
 .slider-button .lucide,
@@ -253,11 +262,27 @@ a.button{
 .slider :is(.slider-image, .testimonial){
     opacity: 0;
     transition: opacity 350ms var(--ease-in-out-3);
-    pointer-events: none;
     grid-area: top;
 }
 
-
 .slider :is(.slider-image, .testimonial).active{
     opacity: 1;
+}
+
+/* Social Items */
+.social-item a{
+    transition: transform 300ms var(--ease-out-3),
+        outline-offset 300ms var(--ease-in-out-3),
+        outline-color 300ms var(--ease-in-out-3),
+        background-color 350ms var(--ease-in-2);
+}
+
+.social-item a:focus-visible{
+    outline-offset: 0.105rem;
+    outline-width: 0.3rem;
+    outline-color: var(--brand-color);
+}
+
+.social-item a:active{
+    transform: scale(0.8);
 }

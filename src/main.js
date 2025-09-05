@@ -6,6 +6,9 @@ import './styles/footer.css'
 import './styles/responsive.css'
 import { createIcons, icons } from 'lucide'
 
+const header = document.querySelector('.header')
+console.log(header)
+const scrollWatcher = document.createElement('div')
 const navigationBar = document.getElementById('mainNavigation')
 const openButton = document.querySelector('.mobile-nav')
 const closeButton = document.querySelector('.mobile-close-nav')
@@ -37,8 +40,6 @@ function setSvg(){
     svgR.setAttribute('data-lucide', 'arrow-big-right-dash')
     svgR.setAttribute('aria-hidden', true)
     sliderRightButtons[0].append(svgR)
-
-    createIcons({ icons })
 }
 
 function toggleNavigation(element){
@@ -152,7 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navigationIcons[0].classList.toggle('active')
     randomPosition()
 
+    scrollWatcher.setAttribute('data-scroll-watcher', '')
+    header.before(scrollWatcher)
+
+    const navObserver = new IntersectionObserver((entries) => {
+        header.classList.toggle('stick', !entries[0].isIntersecting)
+    }, {rootMargin: '300px 0px 0px'})
+    navObserver.observe(scrollWatcher)
+
     setSvg()
+    createIcons({ icons })
     navigationBarSettings()
     escapeKeyNavigation()
     navigationColor()

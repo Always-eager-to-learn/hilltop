@@ -285,59 +285,53 @@
 
 .testimonial-slider-section .slider-button{
     outline-color: transparent;
+    background-color: transparent;
 }
 
 .testimonial-slider-section .slider-left{
     justify-self: center;
 }
 
-.testimonial-slider-section .slider-right{
-    grid-column-start: 3;
+.testimonial-slider-section .grid-wrapper{
+    grid-column-start: 2;
+    display: grid;
 }
 
 .testimonial-slider-section ul{
-    grid-column: 2 / 2;
-    grid-row: 2 / -1;
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
     list-style-type: none;
 }
 
-.testimonial-slider-section ul::before{
+.testimonial-slider-section .quotes{
+    grid-row-start: 1;
+}
+
+.testimonial-slider-section .quotes::before{
     content: open-quote;
     display: block;
     font-size: 4.2rem;
     text-align: center;
     color: var(--sand-0);
     line-height: 0.9;
-    grid-row-start: 1;
 }
 
 .testimonial{
     max-width: 50rem;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    grid-row-start: 2;
-}
-
-.testimonial-slider-section .slider-button{
-    background-color: transparent;
-    transition: background-color 350ms var(--ease-in-3);
 }
 
 .testimonial-slider-section .slider-button .ionicon path{
     stroke: var(--stone-0);
 }
 
-.testimonial-slider-section .slider-button:active,
-.testimonial-slider-section .slider-button:hover,
-.testimonial-slider-section .slider-button:focus{
-    background-color: var(--stone-0);
+.testimonial-slider-section .slider-button:focus-visible{
+   outline-color: var(--choco-0);
 }
 
-.testimonial-slider-section .slider-button:active .ionicon path,
-.testimonial-slider-section .slider-button:focus .ionicon path,
-.testimonial-slider-section .slider-button:hover .ionicon path{
-    stroke: var(--gray-10);
+.testimonial-slider-section .slider-button:active{
+    background-color: var(--stone-3);
+    transform: scale(0.88);
 }
 
 /* Contact Section */
@@ -364,15 +358,21 @@
     font-size: var(--font-size-3);
     transition: 
         background-color 450ms var(--ease-in-out-2),
-        color 250ms var(--ease-in-2);
+        color 250ms var(--ease-in-2),
+        outline-offset 300ms var(--ease-out-3),
+        outline-color 300ms var(--ease-out-3),
+        transform 300ms var(--ease-out-3);
     border-radius: var(--radius-4);
 }
 
-.contact-form .button:hover,
-.contact-form .button:active,
-.contact-form .button:focus{
-    background-color: transparent;
-    color: var(--gray-11);
+.contact-form .button:focus-visible{
+    outline-offset: 0.105rem;
+    outline-width: 0.3rem;
+    outline-color: var(--gray-10);
+}
+
+.contact-form .button:active{
+    transform: scale(0.88);
 }
 
 @media (hover : hover){
@@ -388,5 +388,18 @@
     .slider-button:hover .lucide path,
     .slider-button:active .lucide path{
         stroke: var(--gray-10);
+    }
+
+    .testimonial-slider-section .slider-button:hover{
+        background-color: var(--stone-0);
+    }
+
+    .testimonial-slider-section .slider-button:hover .ionicon path{
+        stroke: var(--gray-10);
+    }
+
+    .contact-form .button:hover{
+        background-color: transparent;
+        color: var(--gray-11);
     }
 }

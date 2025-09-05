@@ -1,3 +1,8 @@
+.header.stick{
+    background-color: rgb(231, 231, 231);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+}
+
 /* Primary - logo */
 .primary-logo{
     text-transform: uppercase;
@@ -14,6 +19,14 @@
 .primary-nav > ul > li > a{
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.primary-nav.active .social-nav a{
+    width: 100%;
+}
+
+.primary-nav.active .social-nav a svg{
+    width: 3rem;
 }
 
 .search-drawer.active{
@@ -148,15 +161,15 @@
 
 /* Github links */
 
-.github_link{
+.header-right .social-nav .github_link{
     position: relative;
 }
 
-.github_link::after{
+.header-right .social-nav .github_link::after{
     content: attr(data-hover-text);
     position: absolute;
     display: block;
-    width: 11rem;
+    width: 10.5rem;
     top: 85%;
     left: -100%;
     white-space: nowrap;
@@ -167,19 +180,6 @@
     padding: 0.3em;
     transition: transform 350ms var(--ease-in-2);
     border-radius: var(--radius-3);
-}
-
-/* Social Items */
-.social-item a{
-    transition: transform 300ms var(--ease-out-3);
-}
-
-.social-item a:focus-visible{
-    outline-offset: 0.125rem;
-}
-
-.social-item a:active{
-    transform: scale(0.8);
 }
 
 @media (hover : hover){
@@ -199,7 +199,7 @@
         stroke: var(--white);
     }
 
-    .github_link:hover::after{
+    .header-right .social-nav .github_link:hover::after{
         transform: scale(1, 1);
     }
 

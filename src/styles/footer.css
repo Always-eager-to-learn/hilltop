@@ -2,8 +2,7 @@
     color: var(--stone-0);
 }
 
-.footer a:hover,
-.footer a:focus,
+.footer a:focus-visible,
 .footer a:active{
     text-decoration-color: var(--red-0);
 }
@@ -11,19 +10,10 @@
 .footer .social-item a{
     background-color: transparent;
     border-radius: var(--radius-3);
-    transition: background-color 350ms var(--ease-in-3);
 }
 
-.footer .social-item a:hover,
-.footer .social-item a:focus,
-.footer .social-item a:active{
-    background-color: var(--red-0);
-}
-
-.footer .social-item a:hover .ionicon,
-.footer .social-item a:active .ionicon,
-.footer .social-item a:focus .ionicon{
-    fill: var(--gray-10);
+.footer .social-item a:focus-visible{
+    outline-color: var(--gray-1);
 }
 
 .footer .social-item .ionicon{
@@ -40,4 +30,18 @@
     text-transform: uppercase;
     margin: 2rem 0 0;
     font-weight: var(--font-weight-6);
+}
+
+@media (hover : hover){
+    .footer a:hover{
+        text-decoration-color: var(--red-0);
+    }
+
+    .footer .social-item a:hover{
+        background-color: var(--red-0);
+    }
+
+    .footer .social-item a:hover .ionicon{
+        fill: var(--gray-10);
+    }
 }
