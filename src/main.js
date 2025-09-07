@@ -7,7 +7,6 @@ import './styles/responsive.css'
 import { createIcons, icons } from 'lucide'
 
 const header = document.querySelector('.header')
-console.log(header)
 const scrollWatcher = document.createElement('div')
 const navigationBar = document.getElementById('mainNavigation')
 const openButton = document.querySelector('.mobile-nav')
@@ -158,6 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navObserver = new IntersectionObserver((entries) => {
         header.classList.toggle('stick', !entries[0].isIntersecting)
+        if(entries[0].isIntersecting){
+            document.querySelector('.main').style.paddingTop = 0
+        }
+        else{
+            document.querySelector('.main').style.paddingTop = `${header.offsetHeight}px`
+        }
     }, {rootMargin: '300px 0px 0px'})
     navObserver.observe(scrollWatcher)
 

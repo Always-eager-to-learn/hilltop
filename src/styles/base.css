@@ -241,7 +241,7 @@ a.button{
     color: var(--camo-0);
 }
 
-:is(.slider-button, social-item a, .contact-form .button, .social-item a){
+:is(.slider-button, social-item a, .contact-form .button, .social-item a, .content-link, .overlay-hover-section .button){
     outline-offset: -0.125rem;
     outline-style: solid;
     outline-color: transparent;
@@ -250,6 +250,9 @@ a.button{
 .slider-button{
     width: 4.2rem;
     height: 4rem;
+}
+
+:is(.slider-button, .content-link){
     transition: outline-offset 350ms var(--ease-elastic-out-2), background-color 300ms var(--ease-out-3), transform 300ms var(--ease-out-3);
 }
 
@@ -285,4 +288,8 @@ a.button{
 
 .social-item a:active{
     transform: scale(0.8);
+}
+
+[id]{
+    scroll-margin-top: 4rem;
 }

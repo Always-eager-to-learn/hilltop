@@ -86,7 +86,7 @@
 }
 
 .slider-content-container .button:focus-visible{
-    outline-color: var(--choco-11);
+    outline-color: var(--choco-12);
     outline-offset: 0.15rem;
     outline-width: 0.35rem;
 }
@@ -122,6 +122,10 @@
     transform: scale(0.8);
 }
 
+.slider-image img{
+    filter: brightness(89%);
+}
+
 /* Card contents */
 
 .card-content{
@@ -144,6 +148,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    --transition-effect: translateX(0.6rem);
 }
 
 .content-link svg{
@@ -155,10 +160,14 @@
     stroke: var(--brand-color);
 }
 
-.content-link:hover svg,
-.content-link:active svg,
-.content-link:focus svg{
-    transform: translateX(0.6rem);
+.content-link:focus-visible{
+    outline-offset: 0.55rem;
+    outline-width: 0.5rem;
+    outline-color: var(--blue-8);
+}
+
+.content-link:focus-visible svg{
+    transform: var(--transition-effect);
 }
 
 .two-column{
@@ -261,13 +270,17 @@
     color: var(--choco-12);
     padding: 0.6rem;
     background-color: var(--gray-3);
-    transition: background-color 450ms var(--ease-in-1)
+    transition: background-color 450ms var(--ease-in-1), outline-offset 300ms var(--ease-in-out-3), outline-width 300ms var(--ease-in-out-3), transform 300ms var(--ease-out-3);
 }
 
-.overlay-hover-section .button:hover,
-.overlay-hover-section .button:active,
-.overlay-hover-section .button:focus{
-    background-color: var(--indigo-0);
+.overlay-hover-section .button:focus-visible{
+    outline-offset: 0.3rem;
+    outline-width: 0.4rem;
+    outline-color: var(--brand-color);
+}
+
+.overlay-hover-section .button:active{
+    transform: scale(0.88);
 }
 
 .overlay-hover-section .fourth-heading{
@@ -401,5 +414,13 @@
     .contact-form .button:hover{
         background-color: transparent;
         color: var(--gray-11);
+    }
+
+    .content-link:hover svg{
+        transition: var(--transition-effect);
+    }
+
+    .overlay-hover-section .button:hover{
+        background-color: var(--indigo-0);
     }
 }
